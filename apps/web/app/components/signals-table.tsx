@@ -108,7 +108,7 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
 
   return (
     <section className="panel table-wrap">
-      <table>
+      <table className="signals-table">
         <thead>
           <tr>
             <th>
@@ -202,7 +202,7 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
           {filtered.map((s, idx) => (
             <tr key={`${s.symbol}-${s.timeframe}-${s.ts}-${idx}`}>
               <td>{shortSymbol(s.symbol)}</td>
-              <td>{s.symbol_name || shortSymbol(s.symbol)}</td>
+              <td className="symbol-name-col" title={s.symbol_name || shortSymbol(s.symbol)}>{s.symbol_name || shortSymbol(s.symbol)}</td>
               <td>{s.market || "UNKNOWN"}</td>
               <td>{s.timeframe}</td>
               <td><span className={badgeClass(s.signal)}>{s.signal}</span></td>
