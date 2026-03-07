@@ -1,3 +1,6 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { Pool } from "pg";
 
 type SignalRow = {
@@ -13,44 +16,63 @@ type SignalRow = {
 const rawDatabaseUrl = (process.env.DATABASE_URL || "").trim();
 const hasPlaceholderDbUrl = /user:pass@host/.test(rawDatabaseUrl);
 const useNoDbMode = !rawDatabaseUrl || hasPlaceholderDbUrl;
-
 const pool = useNoDbMode ? null : new Pool({ connectionString: rawDatabaseUrl });
 
-export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Promise<SignalRow[]> {
-  if (!pool) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const universePath = path.join(__dirname, "..", "data", "universe.json");
+
+function loadUniverse(): string[] {
+  try {
+    const raw = readFileSync(universePath, "utf8");
+    const parsed = JSON.parse(raw) as { symbols?: string[] };
+    return Array.isArray(parsed.symbols) ? parsed.symbols : [];
+  } catch {
     return [];
+  }
+}
+
+export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Promise<SignalRow[]> {
+  const universe = loadUniverse().filter((s) => s && !s.includes("SPARE"));
+  const cap = Math.max(1, limit);
+
+  if (!pool) {
+    return universe.slice(0, cap).map((symbol) => ({
+      symbol,
+      timeframe,
+      signal: "NEUTRAL",
+      price: null,
+      signal_price: null,
+      bars_ago: null,
+      ts: new Date(0).toISOString(),
+    }));
   }
 
   const sql = `
-    with latest_group_runs as (
-      select distinct on (group_id)
-        id, group_id
-      from scan_runs
-      where timeframe = $2
-        and status = 'success'
-      order by group_id, started_at desc
-    ), ranked as (
-      select
-        s.symbol,
-        s.timeframe,
-        s.signal,
-        s.price,
-        s.signal_price,
-        s.bars_ago,
-        s.ts,
-        row_number() over (partition by s.symbol, s.timeframe order by s.ts desc) as rn
-      from signals s
-      join latest_group_runs lgr on lgr.id = s.run_id
-      where s.symbol not like '%SPARE%'
-        and s.timeframe = $2
-    )
-    select symbol, timeframe, signal, price, signal_price, bars_ago, ts
-    from ranked
-    where rn = 1
-    order by symbol asc
-    limit $1
+    select distinct on (s.symbol, s.timeframe)
+      s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
+    from signals s
+    where s.timeframe = $1
+    order by s.symbol, s.timeframe, s.ts desc
   `;
 
-  const { rows } = await pool.query(sql, [limit, timeframe]);
-  return rows as SignalRow[];
+  const { rows } = await pool.query(sql, [timeframe]);
+  const latest = new Map<string, SignalRow>();
+  for (const r of rows as SignalRow[]) {
+    latest.set(r.symbol, r);
+  }
+
+  return universe.slice(0, cap).map((symbol) => {
+    const row = latest.get(symbol);
+    if (row) return row;
+    return {
+      symbol,
+      timeframe,
+      signal: "NEUTRAL",
+      price: null,
+      signal_price: null,
+      bars_ago: null,
+      ts: new Date(0).toISOString(),
+    };
+  });
 }
