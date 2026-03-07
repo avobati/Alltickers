@@ -27,20 +27,36 @@ if (!selected) {
 const run = await beginRun(groupId, timeframe);
 
 try {
+  let failures = 0;
+
   for (const symbol of selected.symbols) {
-    const res = await runUtScan({ symbol, timeframe });
-    await upsertSignal({
-      symbol,
-      timeframe,
-      signal: res.signal,
-      price: res.price,
-      ts: res.ts,
-      runId: run.id
-    });
+    try {
+      const res = await runUtScan({ symbol, timeframe });
+      await upsertSignal({
+        symbol,
+        timeframe,
+        signal: res.signal,
+        price: res.price,
+        ts: res.ts,
+        runId: run.id
+      });
+    } catch (err) {
+      failures += 1;
+      const ts = new Date().toISOString();
+      await upsertSignal({
+        symbol,
+        timeframe,
+        signal: "NEUTRAL",
+        price: null,
+        ts,
+        runId: run.id
+      });
+      console.error(`scan-failed symbol=${symbol} err=${String(err)}`);
+    }
   }
 
   await finishRun(run.id, "success", null);
-  console.log(`Group ${groupId} completed: ${selected.symbols.length} symbols`);
+  console.log(`Group ${groupId} completed: ${selected.symbols.length} symbols, failures=${failures}`);
 } catch (error) {
   await finishRun(run.id, "failed", String(error));
   throw error;
