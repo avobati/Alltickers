@@ -5,6 +5,8 @@ export const dynamic = "force-dynamic";
 
 type Signal = {
   symbol: string;
+  symbol_name: string;
+  market: string;
   timeframe: string;
   signal: string;
   price: number | string | null;

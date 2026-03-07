@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 
 export type SignalRow = {
   symbol: string;
+  symbol_name: string;
+  market: string;
   timeframe: string;
   signal: string;
   price: number | string | null;
@@ -21,11 +23,6 @@ function shortSymbol(tvSymbol: string): string {
   return i > -1 ? tvSymbol.slice(i + 1) : tvSymbol;
 }
 
-function marketFromTvSymbol(tvSymbol: string): string {
-  const i = tvSymbol.indexOf(":");
-  return i > -1 ? tvSymbol.slice(0, i) : "UNKNOWN";
-}
-
 function badgeClass(signal: string): string {
   const s = signal.toUpperCase();
   if (s === "BUY") return "badge buy";
@@ -37,8 +34,16 @@ function sortAsc(values: string[]): string[] {
   return [...values].sort((a, b) => a.localeCompare(b));
 }
 
+function formatPrice(v: number | string | null): string {
+  if (v == null || v === "") return "-";
+  const n = Number(v);
+  if (!Number.isFinite(n)) return "-";
+  return n.toFixed(2);
+}
+
 export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const [symbolFilter, setSymbolFilter] = useState("ALL");
+  const [nameFilter, setNameFilter] = useState("ALL");
   const [marketFilter, setMarketFilter] = useState("ALL");
   const [timeframeFilter, setTimeframeFilter] = useState("ALL");
   const [signalFilter, setSignalFilter] = useState("ALL");
@@ -50,8 +55,12 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
     () => sortAsc(Array.from(new Set(rows.map((r) => shortSymbol(r.symbol).trim().toUpperCase())))),
     [rows]
   );
+  const nameOptions = useMemo(
+    () => sortAsc(Array.from(new Set(rows.map((r) => String(r.symbol_name || "").trim())))).slice(0, 500),
+    [rows]
+  );
   const marketOptions = useMemo(
-    () => sortAsc(Array.from(new Set(rows.map((r) => marketFromTvSymbol(r.symbol).trim().toUpperCase())))),
+    () => sortAsc(Array.from(new Set(rows.map((r) => String(r.market || "UNKNOWN").trim().toUpperCase())))),
     [rows]
   );
   const timeframeOptions = useMemo(
@@ -62,11 +71,13 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const filtered = useMemo(() => {
     let data = rows.filter((r) => {
       const symbol = shortSymbol(r.symbol).trim().toUpperCase();
-      const market = marketFromTvSymbol(r.symbol).trim().toUpperCase();
+      const name = String(r.symbol_name || "").trim();
+      const market = String(r.market || "UNKNOWN").trim().toUpperCase();
       const timeframe = r.timeframe.trim().toLowerCase();
       const signal = r.signal.trim().toUpperCase();
 
       if (symbolFilter !== "ALL" && symbol !== symbolFilter) return false;
+      if (nameFilter !== "ALL" && name !== nameFilter) return false;
       if (marketFilter !== "ALL" && market !== marketFilter) return false;
       if (timeframeFilter !== "ALL" && timeframe !== timeframeFilter) return false;
       if (signalFilter !== "ALL" && signal !== signalFilter) return false;
@@ -93,7 +104,7 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
     }
 
     return data;
-  }, [barsFilter, marketFilter, priceOrder, rows, signalFilter, signalPriceOrder, symbolFilter, timeframeFilter]);
+  }, [barsFilter, marketFilter, nameFilter, priceOrder, rows, signalFilter, signalPriceOrder, symbolFilter, timeframeFilter]);
 
   return (
     <section className="panel table-wrap">
@@ -107,6 +118,16 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
                 <option value="ALL">All</option>
                 {symbolOptions.map((s) => (
                   <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+            </th>
+            <th>
+              Symbol Name
+              <br />
+              <select value={nameFilter} onChange={(e) => setNameFilter(e.target.value)}>
+                <option value="ALL">All</option>
+                {nameOptions.map((n) => (
+                  <option key={n} value={n}>{n}</option>
                 ))}
               </select>
             </th>
@@ -181,12 +202,13 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
           {filtered.map((s, idx) => (
             <tr key={`${s.symbol}-${s.timeframe}-${s.ts}-${idx}`}>
               <td>{shortSymbol(s.symbol)}</td>
-              <td>{marketFromTvSymbol(s.symbol)}</td>
+              <td>{s.symbol_name || shortSymbol(s.symbol)}</td>
+              <td>{s.market || "UNKNOWN"}</td>
               <td>{s.timeframe}</td>
               <td><span className={badgeClass(s.signal)}>{s.signal}</span></td>
               <td>{s.bars_ago ?? "-"}</td>
-              <td>{s.signal_price ?? "-"}</td>
-              <td>{s.price ?? "-"}</td>
+              <td>{formatPrice(s.signal_price)}</td>
+              <td>{formatPrice(s.price)}</td>
               <td>
                 <a className="tv-link" href={tvChartUrl(s.symbol)} target="_blank" rel="noreferrer">
                   Open

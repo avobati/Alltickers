@@ -1,8 +1,11 @@
 import { Pool } from "pg";
 import universe from "../data/universe.json";
+import symbolMeta from "../data/symbol_meta.json";
 
 type SignalRow = {
   symbol: string;
+  symbol_name: string;
+  market: string;
   timeframe: string;
   signal: string;
   price: string | number | null;
@@ -12,11 +15,24 @@ type SignalRow = {
 };
 
 type UniverseFile = { symbols?: string[] };
+type MetaEntry = { name?: string; market?: string };
 
 const rawDatabaseUrl = (process.env.DATABASE_URL || "").trim();
 const hasPlaceholderDbUrl = /user:pass@host/.test(rawDatabaseUrl);
 const useNoDbMode = !rawDatabaseUrl || hasPlaceholderDbUrl;
 const pool = useNoDbMode ? null : new Pool({ connectionString: rawDatabaseUrl });
+
+const meta = symbolMeta as Record<string, MetaEntry>;
+
+function metaFor(symbol: string): { symbol_name: string; market: string } {
+  const entry = meta[symbol] || {};
+  const market = entry.market || (symbol.includes(":") ? symbol.split(":", 1)[0] : "UNKNOWN");
+  const fallbackName = symbol.includes(":") ? symbol.split(":", 2)[1] : symbol;
+  return {
+    symbol_name: entry.name || fallbackName,
+    market,
+  };
+}
 
 function loadUniverse(): string[] {
   const parsed = universe as UniverseFile;
@@ -42,6 +58,7 @@ export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Pro
   if (!pool) {
     return universeSymbols.slice(0, cap).map((symbol) => ({
       symbol,
+      ...metaFor(symbol),
       timeframe,
       signal: "NEUTRAL",
       price: null,
@@ -60,16 +77,18 @@ export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Pro
   `;
 
   const { rows } = await pool.query(sql, [timeframe]);
-  const latest = new Map<string, SignalRow>();
-  for (const r of rows as SignalRow[]) {
+  const latest = new Map<string, Omit<SignalRow, "symbol_name" | "market">>();
+  for (const r of rows as Omit<SignalRow, "symbol_name" | "market">[]) {
     latest.set(String(r.symbol).toUpperCase(), r);
   }
 
   return universeSymbols.slice(0, cap).map((symbol) => {
+    const m = metaFor(symbol);
     const row = latest.get(symbol);
-    if (row) return row;
+    if (row) return { ...row, ...m };
     return {
       symbol,
+      ...m,
       timeframe,
       signal: "NEUTRAL",
       price: null,
