@@ -172,6 +172,8 @@ def ut_bot_alerts(candles: List[Candle], key_value: float, atr_period: int, look
             "sell_recent": False,
             "bars_since_buy": None,
             "bars_since_sell": None,
+            "last_buy_price": None,
+            "last_sell_price": None,
             "atr": 0.0,
             "trailing_stop": 0.0,
             "close": candles[-1].close if candles else 0.0,
@@ -212,6 +214,9 @@ def ut_bot_alerts(candles: List[Candle], key_value: float, atr_period: int, look
     bars_since_buy = None if last_buy_idx is None else (len(closes) - 1 - last_buy_idx)
     bars_since_sell = None if last_sell_idx is None else (len(closes) - 1 - last_sell_idx)
 
+    last_buy_price = None if last_buy_idx is None else closes[last_buy_idx]
+    last_sell_price = None if last_sell_idx is None else closes[last_sell_idx]
+
     buy_recent = bars_since_buy is not None and bars_since_buy < lookback
     sell_recent = bars_since_sell is not None and bars_since_sell < lookback
 
@@ -222,6 +227,8 @@ def ut_bot_alerts(candles: List[Candle], key_value: float, atr_period: int, look
         "sell_recent": sell_recent,
         "bars_since_buy": bars_since_buy,
         "bars_since_sell": bars_since_sell,
+        "last_buy_price": last_buy_price,
+        "last_sell_price": last_sell_price,
         "atr": atr_values[-1],
         "trailing_stop": trails[-1],
         "close": closes[-1],

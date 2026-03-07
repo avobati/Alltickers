@@ -163,3 +163,15 @@ tr:hover td {
     align-items: flex-start;
   }
 }
+
+th select {
+  margin-top: 6px;
+  width: 100%;
+  min-width: 86px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 11px;
+  padding: 4px 6px;
+}

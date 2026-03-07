@@ -25,6 +25,8 @@ export async function runUtScan({ symbol, timeframe }) {
     return {
       signal: parsed.signal,
       price: parsed.price,
+      signalPrice: parsed.signal_price ?? null,
+      barsAgo: parsed.bars_ago ?? null,
       ts: parsed.ts,
       meta: parsed.meta || {},
     };

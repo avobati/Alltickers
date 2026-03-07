@@ -1,4 +1,5 @@
 import { getLatestSignals } from "../lib/db";
+import SignalsTable from "./components/signals-table";
 
 export const dynamic = "force-dynamic";
 
@@ -7,27 +8,13 @@ type Signal = {
   timeframe: string;
   signal: string;
   price: number | string | null;
+  signal_price: number | string | null;
+  bars_ago: number | null;
   ts: string;
 };
 
-function tvChartUrl(symbol: string): string {
-  return `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(symbol)}`;
-}
-
-function displaySymbol(tvSymbol: string): string {
-  const i = tvSymbol.indexOf(":");
-  return i > -1 ? tvSymbol.slice(i + 1) : tvSymbol;
-}
-
-function badgeClass(signal: string): string {
-  const s = signal.toUpperCase();
-  if (s === "BUY") return "badge buy";
-  if (s === "SELL") return "badge sell";
-  return "badge neutral";
-}
-
 export default async function Home() {
-  const signals = (await getLatestSignals(200, "weekly")) as Signal[];
+  const signals = (await getLatestSignals(400, "weekly")) as Signal[];
   const commit = process.env.VERCEL_GIT_COMMIT_SHA || "local";
 
   const buyCount = signals.filter((s) => s.signal === "BUY").length;
@@ -63,38 +50,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="panel table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Symbol</th>
-              <th>TV Symbol</th>
-              <th>Timeframe</th>
-              <th>Signal</th>
-              <th>Price</th>
-              <th>At (UTC)</th>
-              <th>TV</th>
-            </tr>
-          </thead>
-          <tbody>
-            {signals.map((s) => (
-              <tr key={`${s.symbol}-${s.timeframe}-${s.ts}`}>
-                <td>{displaySymbol(s.symbol)}</td>
-                <td>{s.symbol}</td>
-                <td>{s.timeframe}</td>
-                <td><span className={badgeClass(s.signal)}>{s.signal}</span></td>
-                <td>{s.price ?? "-"}</td>
-                <td>{new Date(s.ts).toISOString()}</td>
-                <td>
-                  <a className="tv-link" href={tvChartUrl(s.symbol)} target="_blank" rel="noreferrer">
-                    Open
-                  </a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+      <SignalsTable rows={signals} />
     </main>
   );
 }

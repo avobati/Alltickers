@@ -37,6 +37,8 @@ try {
         timeframe,
         signal: res.signal,
         price: res.price,
+        signalPrice: res.signalPrice,
+        barsAgo: res.barsAgo,
         ts: res.ts,
         runId: run.id
       });
@@ -48,6 +50,8 @@ try {
         timeframe,
         signal: "NEUTRAL",
         price: null,
+        signalPrice: null,
+        barsAgo: null,
         ts,
         runId: run.id
       });

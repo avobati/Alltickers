@@ -64,6 +64,33 @@ def _provider_symbol(symbol: str, provider_map: dict[str, str]) -> str:
     return provider_map.get(symbol.upper(), _default_provider_symbol(symbol))
 
 
+def _signal_metrics(signal: str, tf_data: dict) -> tuple[int | None, float | None]:
+    if signal == "BUY":
+        bars = tf_data.get("bars_since_buy")
+        px = tf_data.get("last_buy_price")
+        return bars, float(px) if px is not None else None
+    if signal == "SELL":
+        bars = tf_data.get("bars_since_sell")
+        px = tf_data.get("last_sell_price")
+        return bars, float(px) if px is not None else None
+
+    b_buy = tf_data.get("bars_since_buy")
+    b_sell = tf_data.get("bars_since_sell")
+    if b_buy is None and b_sell is None:
+        return None, None
+    if b_buy is None:
+        px = tf_data.get("last_sell_price")
+        return b_sell, float(px) if px is not None else None
+    if b_sell is None:
+        px = tf_data.get("last_buy_price")
+        return b_buy, float(px) if px is not None else None
+    if b_buy <= b_sell:
+        px = tf_data.get("last_buy_price")
+        return b_buy, float(px) if px is not None else None
+    px = tf_data.get("last_sell_price")
+    return b_sell, float(px) if px is not None else None
+
+
 def _main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--symbol", required=True)
@@ -92,10 +119,13 @@ def _main() -> None:
 
     tf_data = ut_bot_alerts(candles, key_value, atr_period, lookback)
     signal = _state_from_tf(tf_data)
+    bars_ago, signal_price = _signal_metrics(signal, tf_data)
 
     out = {
         "signal": signal,
         "price": float(tf_data.get("close", 0.0)) if tf_data.get("close") is not None else None,
+        "signal_price": signal_price,
+        "bars_ago": bars_ago,
         "ts": datetime.now(timezone.utc).isoformat(),
         "meta": {
             "provider_symbol": provider_symbol,

@@ -14,10 +14,15 @@ create table if not exists signals (
   timeframe text not null,
   signal text not null check (signal in ('BUY', 'SELL', 'NEUTRAL')),
   price numeric,
+  signal_price numeric,
+  bars_ago integer,
   ts timestamptz not null,
   run_id bigint references scan_runs(id),
   created_at timestamptz not null default now(),
   unique(symbol, timeframe, ts)
 );
+
+alter table signals add column if not exists signal_price numeric;
+alter table signals add column if not exists bars_ago integer;
 
 create index if not exists idx_signals_symbol_tf_ts on signals(symbol, timeframe, ts desc);

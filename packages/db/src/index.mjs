@@ -45,18 +45,23 @@ export async function finishRun(runId, status, error) {
   await query(sql, [runId, status, error]);
 }
 
-export async function upsertSignal({ symbol, timeframe, signal, price, ts, runId }) {
+export async function upsertSignal({ symbol, timeframe, signal, price, signalPrice, barsAgo, ts, runId }) {
   if (useNoDbMode) {
     return;
   }
 
   const sql = `
-    insert into signals(symbol, timeframe, signal, price, ts, run_id)
-    values ($1, $2, $3, $4, $5, $6)
+    insert into signals(symbol, timeframe, signal, price, signal_price, bars_ago, ts, run_id)
+    values ($1, $2, $3, $4, $5, $6, $7, $8)
     on conflict (symbol, timeframe, ts)
-    do update set signal = excluded.signal, price = excluded.price, run_id = excluded.run_id
+    do update set
+      signal = excluded.signal,
+      price = excluded.price,
+      signal_price = excluded.signal_price,
+      bars_ago = excluded.bars_ago,
+      run_id = excluded.run_id
   `;
-  await query(sql, [symbol, timeframe, signal, price, ts, runId]);
+  await query(sql, [symbol, timeframe, signal, price, signalPrice, barsAgo, ts, runId]);
 }
 
 export async function getLatestSignals(limit = 100) {
@@ -65,7 +70,7 @@ export async function getLatestSignals(limit = 100) {
   }
 
   const sql = `
-    select s.symbol, s.timeframe, s.signal, s.price, s.ts
+    select s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
     from signals s
     join (
       select symbol, timeframe, max(ts) as max_ts
