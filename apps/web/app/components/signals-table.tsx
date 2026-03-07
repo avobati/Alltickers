@@ -21,6 +21,11 @@ function shortSymbol(tvSymbol: string): string {
   return i > -1 ? tvSymbol.slice(i + 1) : tvSymbol;
 }
 
+function marketFromTvSymbol(tvSymbol: string): string {
+  const i = tvSymbol.indexOf(":");
+  return i > -1 ? tvSymbol.slice(0, i) : "UNKNOWN";
+}
+
 function badgeClass(signal: string): string {
   const s = signal.toUpperCase();
   if (s === "BUY") return "badge buy";
@@ -30,22 +35,21 @@ function badgeClass(signal: string): string {
 
 export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const [symbolFilter, setSymbolFilter] = useState("ALL");
-  const [tvFilter, setTvFilter] = useState("ALL");
+  const [marketFilter, setMarketFilter] = useState("ALL");
   const [timeframeFilter, setTimeframeFilter] = useState("ALL");
   const [signalFilter, setSignalFilter] = useState("ALL");
   const [barsFilter, setBarsFilter] = useState("ALL");
   const [signalPriceOrder, setSignalPriceOrder] = useState("none");
   const [priceOrder, setPriceOrder] = useState("none");
-  const [timeOrder, setTimeOrder] = useState("desc");
 
   const symbolOptions = useMemo(() => Array.from(new Set(rows.map((r) => shortSymbol(r.symbol)))).slice(0, 300), [rows]);
-  const tvOptions = useMemo(() => Array.from(new Set(rows.map((r) => r.symbol))).slice(0, 300), [rows]);
+  const marketOptions = useMemo(() => Array.from(new Set(rows.map((r) => marketFromTvSymbol(r.symbol)))).slice(0, 40), [rows]);
   const timeframeOptions = useMemo(() => Array.from(new Set(rows.map((r) => r.timeframe))), [rows]);
 
   const filtered = useMemo(() => {
     let data = rows.filter((r) => {
       if (symbolFilter !== "ALL" && shortSymbol(r.symbol) !== symbolFilter) return false;
-      if (tvFilter !== "ALL" && r.symbol !== tvFilter) return false;
+      if (marketFilter !== "ALL" && marketFromTvSymbol(r.symbol) !== marketFilter) return false;
       if (timeframeFilter !== "ALL" && r.timeframe !== timeframeFilter) return false;
       if (signalFilter !== "ALL" && r.signal !== signalFilter) return false;
       if (barsFilter === "0" && r.bars_ago !== 0) return false;
@@ -70,14 +74,8 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
       });
     }
 
-    data = [...data].sort((a, b) => {
-      const at = new Date(a.ts).getTime();
-      const bt = new Date(b.ts).getTime();
-      return timeOrder === "asc" ? at - bt : bt - at;
-    });
-
     return data;
-  }, [barsFilter, priceOrder, rows, signalFilter, signalPriceOrder, symbolFilter, timeframeFilter, timeOrder, tvFilter]);
+  }, [barsFilter, marketFilter, priceOrder, rows, signalFilter, signalPriceOrder, symbolFilter, timeframeFilter]);
 
   return (
     <section className="panel table-wrap">
@@ -95,12 +93,12 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
               </select>
             </th>
             <th>
-              TV Symbol
+              Market
               <br />
-              <select value={tvFilter} onChange={(e) => setTvFilter(e.target.value)}>
+              <select value={marketFilter} onChange={(e) => setMarketFilter(e.target.value)}>
                 <option value="ALL">All</option>
-                {tvOptions.map((s) => (
-                  <option key={s} value={s}>{s}</option>
+                {marketOptions.map((m) => (
+                  <option key={m} value={m}>{m}</option>
                 ))}
               </select>
             </th>
@@ -153,14 +151,6 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
               </select>
             </th>
             <th>
-              At (UTC)
-              <br />
-              <select value={timeOrder} onChange={(e) => setTimeOrder(e.target.value)}>
-                <option value="desc">Newest</option>
-                <option value="asc">Oldest</option>
-              </select>
-            </th>
-            <th>
               TV
               <br />
               <select value="open" disabled>
@@ -173,13 +163,12 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
           {filtered.map((s) => (
             <tr key={`${s.symbol}-${s.timeframe}-${s.ts}`}>
               <td>{shortSymbol(s.symbol)}</td>
-              <td>{s.symbol}</td>
+              <td>{marketFromTvSymbol(s.symbol)}</td>
               <td>{s.timeframe}</td>
               <td><span className={badgeClass(s.signal)}>{s.signal}</span></td>
               <td>{s.bars_ago ?? "-"}</td>
               <td>{s.signal_price ?? "-"}</td>
               <td>{s.price ?? "-"}</td>
-              <td>{new Date(s.ts).toISOString()}</td>
               <td>
                 <a className="tv-link" href={tvChartUrl(s.symbol)} target="_blank" rel="noreferrer">
                   Open

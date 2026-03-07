@@ -121,9 +121,15 @@ def _main() -> None:
     signal = _state_from_tf(tf_data)
     bars_ago, signal_price = _signal_metrics(signal, tf_data)
 
+    close_price = float(tf_data.get("close", 0.0)) if tf_data.get("close") is not None else None
+    if bars_ago is None:
+      bars_ago = 0
+    if signal_price is None:
+      signal_price = close_price
+
     out = {
         "signal": signal,
-        "price": float(tf_data.get("close", 0.0)) if tf_data.get("close") is not None else None,
+        "price": close_price,
         "signal_price": signal_price,
         "bars_ago": bars_ago,
         "ts": datetime.now(timezone.utc).isoformat(),
