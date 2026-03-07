@@ -43,7 +43,7 @@ function formatPrice(v: number | string | null): string {
 
 export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const [symbolFilter, setSymbolFilter] = useState("ALL");
-  const [nameFilter, setNameFilter] = useState("ALL");
+  const [nameFilter, setNameFilter] = useState("");
   const [marketFilter, setMarketFilter] = useState("ALL");
   const [timeframeFilter, setTimeframeFilter] = useState("ALL");
   const [signalFilter, setSignalFilter] = useState("ALL");
@@ -53,10 +53,6 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
 
   const symbolOptions = useMemo(
     () => sortAsc(Array.from(new Set(rows.map((r) => shortSymbol(r.symbol).trim().toUpperCase())))),
-    [rows]
-  );
-  const nameOptions = useMemo(
-    () => sortAsc(Array.from(new Set(rows.map((r) => String(r.symbol_name || "").trim())))).slice(0, 500),
     [rows]
   );
   const marketOptions = useMemo(
@@ -77,7 +73,7 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
       const signal = r.signal.trim().toUpperCase();
 
       if (symbolFilter !== "ALL" && symbol !== symbolFilter) return false;
-      if (nameFilter !== "ALL" && name !== nameFilter) return false;
+      if (nameFilter && !name.toLowerCase().includes(nameFilter.toLowerCase())) return false;
       if (marketFilter !== "ALL" && market !== marketFilter) return false;
       if (timeframeFilter !== "ALL" && timeframe !== timeframeFilter) return false;
       if (signalFilter !== "ALL" && signal !== signalFilter) return false;
@@ -124,12 +120,12 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
             <th>
               Symbol Name
               <br />
-              <select value={nameFilter} onChange={(e) => setNameFilter(e.target.value)}>
-                <option value="ALL">All</option>
-                {nameOptions.map((n) => (
-                  <option key={n} value={n}>{n}</option>
-                ))}
-              </select>
+              <input
+                type="text"
+                value={nameFilter}
+                onChange={(e) => setNameFilter(e.target.value)}
+                placeholder="Search name..."
+              />
             </th>
             <th>
               Market
@@ -221,3 +217,4 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
     </section>
   );
 }
+

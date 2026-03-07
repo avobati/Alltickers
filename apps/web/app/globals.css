@@ -164,7 +164,8 @@ tr:hover td {
   }
 }
 
-th select {
+th select,
+th input {
   margin-top: 6px;
   width: 100%;
   min-width: 86px;
@@ -195,3 +196,5 @@ th select {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+
