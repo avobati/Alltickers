@@ -5,6 +5,8 @@ type SignalRow = {
   timeframe: string;
   signal: string;
   price: string | number | null;
+  signal_price: string | number | null;
+  bars_ago: number | null;
   ts: string;
 };
 
@@ -20,7 +22,7 @@ export async function getLatestSignals(limit = 100, timeframe = "weekly"): Promi
   }
 
   const sql = `
-    select s.symbol, s.timeframe, s.signal, s.price, s.ts
+    select s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
     from signals s
     join (
       select symbol, timeframe, max(ts) as max_ts
