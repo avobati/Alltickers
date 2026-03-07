@@ -24,7 +24,7 @@ def _dt_from_unix(ts: int) -> str:
     return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
 
 
-def fetch_yahoo_daily(provider_symbol: str, range_name: str = "10y", retries: int = 4) -> List[Candle]:
+def fetch_yahoo_daily(provider_symbol: str, range_name: str = "10y", retries: int = 1) -> List[Candle]:
     encoded = urllib.parse.quote(provider_symbol, safe="")
     url = f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}?interval=1d&range={range_name}"
 
@@ -40,13 +40,13 @@ def fetch_yahoo_daily(provider_symbol: str, range_name: str = "10y", retries: in
                     "Accept": "application/json",
                 },
             )
-            with urllib.request.urlopen(req, timeout=20) as response:
+            with urllib.request.urlopen(req, timeout=8) as response:
                 payload = json.loads(response.read().decode("utf-8"))
             break
         except Exception as exc:  # noqa: BLE001
             last_err = exc
             if attempt < retries - 1:
-                time.sleep((2 ** attempt) + random.uniform(0.2, 0.8))
+                time.sleep(0.25 + random.uniform(0.05, 0.2))
 
     if payload is None:
         if last_err:
