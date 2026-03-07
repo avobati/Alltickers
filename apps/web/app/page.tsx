@@ -14,6 +14,11 @@ function tvChartUrl(symbol: string): string {
   return `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(symbol)}`;
 }
 
+function displaySymbol(tvSymbol: string): string {
+  const i = tvSymbol.indexOf(":");
+  return i > -1 ? tvSymbol.slice(i + 1) : tvSymbol;
+}
+
 function badgeClass(signal: string): string {
   const s = signal.toUpperCase();
   if (s === "BUY") return "badge buy";
@@ -22,7 +27,7 @@ function badgeClass(signal: string): string {
 }
 
 export default async function Home() {
-  const signals = (await getLatestSignals(200)) as Signal[];
+  const signals = (await getLatestSignals(200, "weekly")) as Signal[];
   const commit = process.env.VERCEL_GIT_COMMIT_SHA || "local";
 
   const buyCount = signals.filter((s) => s.signal === "BUY").length;
@@ -34,7 +39,7 @@ export default async function Home() {
       <section className="hero">
         <div>
           <h1 className="title">AllTickers UT Scanner</h1>
-          <p className="sub">TradingView symbols, 50 groups x 200 tickers, daily batch engine.</p>
+          <p className="sub">Weekly signals, 50 groups x 200 tickers, TradingView-linked output.</p>
         </div>
         <div className="meta">Build {commit.slice(0, 7)}</div>
       </section>
@@ -63,6 +68,7 @@ export default async function Home() {
           <thead>
             <tr>
               <th>Symbol</th>
+              <th>TV Symbol</th>
               <th>Timeframe</th>
               <th>Signal</th>
               <th>Price</th>
@@ -73,6 +79,7 @@ export default async function Home() {
           <tbody>
             {signals.map((s) => (
               <tr key={`${s.symbol}-${s.timeframe}-${s.ts}`}>
+                <td>{displaySymbol(s.symbol)}</td>
                 <td>{s.symbol}</td>
                 <td>{s.timeframe}</td>
                 <td><span className={badgeClass(s.signal)}>{s.signal}</span></td>

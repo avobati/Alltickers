@@ -15,7 +15,7 @@ function getArg(name, fallback) {
 }
 
 const groupId = Number(getArg("group", "1"));
-const timeframe = process.env.SCAN_TIMEFRAME || "daily";
+const timeframe = process.env.SCAN_TIMEFRAME || "weekly";
 
 const groups = JSON.parse(fs.readFileSync(groupsPath, "utf8"));
 const selected = groups.find((g) => g.groupId === groupId);

@@ -2,7 +2,9 @@ import { getLatestSignals } from "../../../lib/db";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
-  const items = await getLatestSignals(200);
-  return Response.json({ ok: true, count: items.length, items });
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const timeframe = searchParams.get("timeframe") || "weekly";
+  const items = await getLatestSignals(200, timeframe);
+  return Response.json({ ok: true, timeframe, count: items.length, items });
 }
