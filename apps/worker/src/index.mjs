@@ -1,9 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { runUtScan } from "core";
 import { beginRun, finishRun, upsertSignal } from "db";
 
-const root = path.resolve(process.cwd(), "../..");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const root = path.resolve(__dirname, "../../..");
 const groupsPath = path.join(root, "config", "groups.json");
 
 function getArg(name, fallback) {
