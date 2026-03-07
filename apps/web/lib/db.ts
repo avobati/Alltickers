@@ -29,13 +29,25 @@ export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Pro
       where timeframe = $2
         and status = 'success'
       order by group_id, started_at desc
+    ), ranked as (
+      select
+        s.symbol,
+        s.timeframe,
+        s.signal,
+        s.price,
+        s.signal_price,
+        s.bars_ago,
+        s.ts,
+        row_number() over (partition by s.symbol, s.timeframe order by s.ts desc) as rn
+      from signals s
+      join latest_group_runs lgr on lgr.id = s.run_id
+      where s.symbol not like '%SPARE%'
+        and s.timeframe = $2
     )
-    select s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
-    from signals s
-    join latest_group_runs lgr on lgr.id = s.run_id
-    where s.symbol not like '%SPARE%'
-      and s.timeframe = $2
-    order by s.symbol asc, s.ts desc
+    select symbol, timeframe, signal, price, signal_price, bars_ago, ts
+    from ranked
+    where rn = 1
+    order by symbol asc
     limit $1
   `;
 

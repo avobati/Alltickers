@@ -156,7 +156,12 @@
       "NASDAQ:ALVO",
       "NASDAQ:ALXO",
       "NASDAQ:ALZN",
-      "NASDAQ:AMAL",
+      "NASDAQ:AMAL"
+    ]
+  },
+  {
+    "groupId": 2,
+    "symbols": [
       "NASDAQ:AMAT",
       "NASDAQ:AMBA",
       "NASDAQ:AMCI",
@@ -164,12 +169,7 @@
       "NASDAQ:AMD",
       "NASDAQ:AMDD",
       "NASDAQ:AMGN",
-      "NASDAQ:AMIX"
-    ]
-  },
-  {
-    "groupId": 2,
-    "symbols": [
+      "NASDAQ:AMIX",
       "NASDAQ:AMKR",
       "NASDAQ:AMLX",
       "NASDAQ:AMOD",
@@ -316,7 +316,12 @@
       "NASDAQ:AVR",
       "NASDAQ:AVS",
       "NASDAQ:AVT",
-      "NASDAQ:AVTX",
+      "NASDAQ:AVTX"
+    ]
+  },
+  {
+    "groupId": 3,
+    "symbols": [
       "NASDAQ:AVX",
       "NASDAQ:AVXL",
       "NASDAQ:AWRE",
@@ -332,12 +337,7 @@
       "NASDAQ:AZTA",
       "NASDAQ:BACC",
       "NASDAQ:BACQ",
-      "NASDAQ:BAER"
-    ]
-  },
-  {
-    "groupId": 3,
-    "symbols": [
+      "NASDAQ:BAER",
       "NASDAQ:BAFN",
       "NASDAQ:BAND",
       "NASDAQ:BANF",
@@ -476,7 +476,12 @@
       "NASDAQ:BSAA",
       "NASDAQ:BSBK",
       "NASDAQ:BSET",
-      "NASDAQ:BSRR",
+      "NASDAQ:BSRR"
+    ]
+  },
+  {
+    "groupId": 4,
+    "symbols": [
       "NASDAQ:BSVN",
       "NASDAQ:BSY",
       "NASDAQ:BTAI",
@@ -500,12 +505,7 @@
       "NASDAQ:BVS",
       "NASDAQ:BWB",
       "NASDAQ:BWEN",
-      "NASDAQ:BWFG"
-    ]
-  },
-  {
-    "groupId": 4,
-    "symbols": [
+      "NASDAQ:BWFG",
       "NASDAQ:BWIN",
       "NASDAQ:BWMN",
       "NASDAQ:BYAH",
@@ -636,7 +636,12 @@
       "NASDAQ:CHTR",
       "NASDAQ:CHYM",
       "NASDAQ:CIFR",
-      "NASDAQ:CIGI",
+      "NASDAQ:CIGI"
+    ]
+  },
+  {
+    "groupId": 5,
+    "symbols": [
       "NASDAQ:CIGL",
       "NASDAQ:CIIT",
       "NASDAQ:CINF",
@@ -668,12 +673,7 @@
       "NASDAQ:CLYM",
       "NASDAQ:CMBM",
       "NASDAQ:CMCO",
-      "NASDAQ:CMCSA"
-    ]
-  },
-  {
-    "groupId": 5,
-    "symbols": [
+      "NASDAQ:CMCSA",
       "NASDAQ:CMCT",
       "NASDAQ:CME",
       "NASDAQ:CMII",
@@ -796,7 +796,12 @@
       "NASDAQ:CVGW",
       "NASDAQ:CVKD",
       "NASDAQ:CVLT",
-      "NASDAQ:CVRX",
+      "NASDAQ:CVRX"
+    ]
+  },
+  {
+    "groupId": 6,
+    "symbols": [
       "NASDAQ:CVV",
       "NASDAQ:CWBC",
       "NASDAQ:CWCO",
@@ -836,12 +841,7 @@
       "NASDAQ:DEFT",
       "NASDAQ:DERM",
       "NASDAQ:DEVS",
-      "NASDAQ:DFDV"
-    ]
-  },
-  {
-    "groupId": 6,
-    "symbols": [
+      "NASDAQ:DFDV",
       "NASDAQ:DFLI",
       "NASDAQ:DFNS",
       "NASDAQ:DFSC",
@@ -956,7 +956,12 @@
       "NASDAQ:ELDN",
       "NASDAQ:ELE",
       "NASDAQ:ELIL",
-      "NASDAQ:ELIS",
+      "NASDAQ:ELIS"
+    ]
+  },
+  {
+    "groupId": 7,
+    "symbols": [
       "NASDAQ:ELOG",
       "NASDAQ:ELPW",
       "NASDAQ:ELSE",
@@ -1004,12 +1009,7 @@
       "NASDAQ:ESHA",
       "NASDAQ:ESLA",
       "NASDAQ:ESLT",
-      "NASDAQ:ESOA"
-    ]
-  },
-  {
-    "groupId": 7,
-    "symbols": [
+      "NASDAQ:ESOA",
       "NASDAQ:ESPR",
       "NASDAQ:ESQ",
       "NASDAQ:ESTA",
@@ -1116,7 +1116,12 @@
       "NASDAQ:FLNC",
       "NASDAQ:FLNT",
       "NASDAQ:FLUX",
-      "NASDAQ:FLWS",
+      "NASDAQ:FLWS"
+    ]
+  },
+  {
+    "groupId": 8,
+    "symbols": [
       "NASDAQ:FLXS",
       "NASDAQ:FLY",
       "NASDAQ:FLYE",
@@ -1172,12 +1177,7 @@
       "NASDAQ:FTHM",
       "NASDAQ:FTLF",
       "NASDAQ:FTNT",
-      "NASDAQ:FTRE"
-    ]
-  },
-  {
-    "groupId": 8,
-    "symbols": [
+      "NASDAQ:FTRE",
       "NASDAQ:FTRK",
       "NASDAQ:FUFU",
       "NASDAQ:FULC",
@@ -1276,7 +1276,12 @@
       "NASDAQ:GOOG",
       "NASDAQ:GOOGL",
       "NASDAQ:GOSS",
-      "NASDAQ:GOVX",
+      "NASDAQ:GOVX"
+    ]
+  },
+  {
+    "groupId": 9,
+    "symbols": [
       "NASDAQ:GP",
       "NASDAQ:GPAC",
       "NASDAQ:GPAT",
@@ -1340,12 +1345,7 @@
       "NASDAQ:HCKT",
       "NASDAQ:HCMA",
       "NASDAQ:HCSG",
-      "NASDAQ:HCTI"
-    ]
-  },
-  {
-    "groupId": 9,
-    "symbols": [
+      "NASDAQ:HCTI",
       "NASDAQ:HCWB",
       "NASDAQ:HDSN",
       "NASDAQ:HELE",
@@ -1436,7 +1436,12 @@
       "NASDAQ:IBG",
       "NASDAQ:IBIO",
       "NASDAQ:IBKR",
-      "NASDAQ:IBOC",
+      "NASDAQ:IBOC"
+    ]
+  },
+  {
+    "groupId": 10,
+    "symbols": [
       "NASDAQ:IBRX",
       "NASDAQ:ICCC",
       "NASDAQ:ICCM",
@@ -1508,12 +1513,7 @@
       "NASDAQ:INSM",
       "NASDAQ:INTA",
       "NASDAQ:INTC",
-      "NASDAQ:INTG"
-    ]
-  },
-  {
-    "groupId": 10,
-    "symbols": [
+      "NASDAQ:INTG",
       "NASDAQ:INTJ",
       "NASDAQ:INTR",
       "NASDAQ:INTS",
@@ -1596,7 +1596,12 @@
       "NASDAQ:JRVR",
       "NASDAQ:JSPR",
       "NASDAQ:JTAI",
-      "NASDAQ:JUNS",
+      "NASDAQ:JUNS"
+    ]
+  },
+  {
+    "groupId": 11,
+    "symbols": [
       "NASDAQ:JVA",
       "NASDAQ:JWEL",
       "NASDAQ:JXG",
@@ -1676,12 +1681,7 @@
       "NASDAQ:LAMR",
       "NASDAQ:LAND",
       "NASDAQ:LARK",
-      "NASDAQ:LASE"
-    ]
-  },
-  {
-    "groupId": 11,
-    "symbols": [
+      "NASDAQ:LASE",
       "NASDAQ:LASR",
       "NASDAQ:LATA",
       "NASDAQ:LAUR",
@@ -1756,7 +1756,12 @@
       "NASDAQ:LNKS",
       "NASDAQ:LNSR",
       "NASDAQ:LNT",
-      "NASDAQ:LNTH",
+      "NASDAQ:LNTH"
+    ]
+  },
+  {
+    "groupId": 12,
+    "symbols": [
       "NASDAQ:LNZA",
       "NASDAQ:LOAN",
       "NASDAQ:LOBO",
@@ -1844,12 +1849,7 @@
       "NASDAQ:MCBS",
       "NASDAQ:MCFT",
       "NASDAQ:MCGA",
-      "NASDAQ:MCHB"
-    ]
-  },
-  {
-    "groupId": 12,
-    "symbols": [
+      "NASDAQ:MCHB",
       "NASDAQ:MCHP",
       "NASDAQ:MCHX",
       "NASDAQ:MCRB",
@@ -1916,7 +1916,12 @@
       "NASDAQ:MLEC",
       "NASDAQ:MLGO",
       "NASDAQ:MLKN",
-      "NASDAQ:MLTX",
+      "NASDAQ:MLTX"
+    ]
+  },
+  {
+    "groupId": 13,
+    "symbols": [
       "NASDAQ:MLYS",
       "NASDAQ:MMSI",
       "NASDAQ:MMTX",
@@ -2012,12 +2017,7 @@
       "NASDAQ:NCEW",
       "NASDAQ:NCI",
       "NASDAQ:NCMI",
-      "NASDAQ:NCNO"
-    ]
-  },
-  {
-    "groupId": 13,
-    "symbols": [
+      "NASDAQ:NCNO",
       "NASDAQ:NCPL",
       "NASDAQ:NCRA",
       "NASDAQ:NCSM",
@@ -2076,7 +2076,12 @@
       "NASDAQ:NPCE",
       "NASDAQ:NPT",
       "NASDAQ:NRC",
-      "NASDAQ:NRDS",
+      "NASDAQ:NRDS"
+    ]
+  },
+  {
+    "groupId": 14,
+    "symbols": [
       "NASDAQ:NRIM",
       "NASDAQ:NRIX",
       "NASDAQ:NRSN",
@@ -2180,12 +2185,7 @@
       "NASDAQ:ONCH",
       "NASDAQ:ONCO",
       "NASDAQ:ONCY",
-      "NASDAQ:ONDS"
-    ]
-  },
-  {
-    "groupId": 14,
-    "symbols": [
+      "NASDAQ:ONDS",
       "NASDAQ:ONEG",
       "NASDAQ:ONEW",
       "NASDAQ:ONFO",
@@ -2236,7 +2236,12 @@
       "NASDAQ:PACH",
       "NASDAQ:PAGP",
       "NASDAQ:PAHC",
-      "NASDAQ:PAL",
+      "NASDAQ:PAL"
+    ]
+  },
+  {
+    "groupId": 15,
+    "symbols": [
       "NASDAQ:PALD",
       "NASDAQ:PALI",
       "NASDAQ:PALU",
@@ -2348,12 +2353,7 @@
       "NYSE:ALH",
       "NYSE:ALIT",
       "NYSE:ALK",
-      "NYSE:ALL"
-    ]
-  },
-  {
-    "groupId": 15,
-    "symbols": [
+      "NYSE:ALL",
       "NYSE:ALL$B",
       "NYSE:ALLE",
       "NYSE:ALLY",
@@ -2396,7 +2396,12 @@
       "NYSE:AP",
       "NYSE:APAM",
       "NYSE:APD",
-      "NYSE:APG",
+      "NYSE:APG"
+    ]
+  },
+  {
+    "groupId": 16,
+    "symbols": [
       "NYSE:APH",
       "NYSE:APLE",
       "NYSE:APO",
@@ -2516,12 +2521,7 @@
       "NYSE:BH",
       "NYSE:BH.A",
       "NYSE:BHC",
-      "NYSE:BHE"
-    ]
-  },
-  {
-    "groupId": 16,
-    "symbols": [
+      "NYSE:BHE",
       "NYSE:BHR",
       "NYSE:BHVN",
       "NYSE:BIII",
@@ -2556,7 +2556,12 @@
       "NYSE:BNL",
       "NYSE:BNT",
       "NYSE:BOBS",
-      "NYSE:BOC",
+      "NYSE:BOC"
+    ]
+  },
+  {
+    "groupId": 17,
+    "symbols": [
       "NYSE:BOH",
       "NYSE:BOOT",
       "NYSE:BORR",
@@ -2684,12 +2689,7 @@
       "NYSE:CNK",
       "NYSE:CNM",
       "NYSE:CNMD",
-      "NYSE:CNNE"
-    ]
-  },
-  {
-    "groupId": 17,
-    "symbols": [
+      "NYSE:CNNE",
       "NYSE:CNO",
       "NYSE:CNO$A",
       "NYSE:CNP",
@@ -2716,7 +2716,12 @@
       "NYSE:CPF",
       "NYSE:CPK",
       "NYSE:CPNG",
-      "NYSE:CPRI",
+      "NYSE:CPRI"
+    ]
+  },
+  {
+    "groupId": 18,
+    "symbols": [
       "NYSE:CPS",
       "NYSE:CR",
       "NYSE:CRBG",
@@ -2852,12 +2857,7 @@
       "NYSE:ECC",
       "NYSE:ECG",
       "NYSE:ECL",
-      "NYSE:ECO"
-    ]
-  },
-  {
-    "groupId": 18,
-    "symbols": [
+      "NYSE:ECO",
       "NYSE:ECVT",
       "NYSE:ED",
       "NYSE:EDU",
@@ -2876,7 +2876,12 @@
       "NYSE:EHAB",
       "NYSE:EHC",
       "NYSE:EIC",
-      "NYSE:EIG",
+      "NYSE:EIG"
+    ]
+  },
+  {
+    "groupId": 19,
+    "symbols": [
       "NYSE:EIX",
       "NYSE:EL",
       "NYSE:ELAN",
@@ -3020,12 +3025,7 @@
       "NYSE:GEO",
       "NYSE:GETY",
       "NYSE:GEV",
-      "NYSE:GFF"
-    ]
-  },
-  {
-    "groupId": 19,
-    "symbols": [
+      "NYSE:GFF",
       "NYSE:GFL",
       "NYSE:GFR",
       "NYSE:GGB",
@@ -3036,7 +3036,12 @@
       "NYSE:GHC",
       "NYSE:GHM",
       "NYSE:GIB",
-      "NYSE:GIC",
+      "NYSE:GIC"
+    ]
+  },
+  {
+    "groupId": 20,
+    "symbols": [
       "NYSE:GIL",
       "NYSE:GIS",
       "NYSE:GJH",
@@ -3188,15 +3193,15 @@
       "NYSE:IP",
       "NYSE:IPI",
       "NYSE:IQV",
-      "NYSE:IR"
+      "NYSE:IR",
+      "NYSE:IRAB",
+      "NYSE:IRM",
+      "NYSE:IT"
     ]
   },
   {
-    "groupId": 20,
+    "groupId": 21,
     "symbols": [
-      "NYSE:IRAB",
-      "NYSE:IRM",
-      "NYSE:IT",
       "NYSE:ITGR",
       "NYSE:ITT",
       "NYSE:ITW",
@@ -3351,17 +3356,17 @@
       "NYSE:MCK",
       "NYSE:MCO",
       "NYSE:MCS",
-      "NYSE:MCY",
+      "NYSE:MCY"
+    ]
+  },
+  {
+    "groupId": 22,
+    "symbols": [
       "NYSE:MD",
       "NYSE:MDT",
       "NYSE:MDU",
       "NYSE:MDV",
-      "NYSE:MEC"
-    ]
-  },
-  {
-    "groupId": 21,
-    "symbols": [
+      "NYSE:MEC",
       "NYSE:MED",
       "NYSE:MEG",
       "NYSE:MEI",
@@ -3511,7 +3516,12 @@
       "NYSE:NVR",
       "NYSE:NVRI",
       "NYSE:NVS",
-      "NYSE:NVST",
+      "NYSE:NVST"
+    ]
+  },
+  {
+    "groupId": 23,
+    "symbols": [
       "NYSE:NVT",
       "NYSE:NWAX",
       "NYSE:NWN",
@@ -3524,12 +3534,7 @@
       "NYSE:O",
       "NYSE:OBDC",
       "NYSE:OBK",
-      "NYSE:OC"
-    ]
-  },
-  {
-    "groupId": 22,
-    "symbols": [
+      "NYSE:OC",
       "NYSE:ODC",
       "NYSE:ODV",
       "NYSE:OEC",
@@ -3671,7 +3676,12 @@
       "NYSE:Q",
       "NYSE:QBTS",
       "NYSE:QGEN",
-      "NYSE:QSR",
+      "NYSE:QSR"
+    ]
+  },
+  {
+    "groupId": 24,
+    "symbols": [
       "NYSE:QTWO",
       "NYSE:QUAD",
       "NYSE:QXO",
@@ -3692,12 +3702,7 @@
       "NYSE:RDN",
       "NYSE:RDW",
       "NYSE:RDY",
-      "NYSE:RES"
-    ]
-  },
-  {
-    "groupId": 23,
-    "symbols": [
+      "NYSE:RES",
       "NYSE:REX",
       "NYSE:REXR",
       "NYSE:REZI",
@@ -3831,7 +3836,12 @@
       "NYSE:SMWB",
       "NYSE:SN",
       "NYSE:SNA",
-      "NYSE:SNAP",
+      "NYSE:SNAP"
+    ]
+  },
+  {
+    "groupId": 25,
+    "symbols": [
       "NYSE:SNDA",
       "NYSE:SNDR",
       "NYSE:SNN",
@@ -3860,12 +3870,7 @@
       "NYSE:SQM",
       "NYSE:SR",
       "NYSE:SRE",
-      "NYSE:SRFM"
-    ]
-  },
-  {
-    "groupId": 24,
-    "symbols": [
+      "NYSE:SRFM",
       "NYSE:SRG",
       "NYSE:SRI",
       "NYSE:SRL",
@@ -3991,7 +3996,12 @@
       "NYSE:TSN",
       "NYSE:TSQ",
       "NYSE:TT",
-      "NYSE:TTAM",
+      "NYSE:TTAM"
+    ]
+  },
+  {
+    "groupId": 26,
+    "symbols": [
       "NYSE:TTC",
       "NYSE:TTE",
       "NYSE:TTI",
@@ -4028,12 +4038,7 @@
       "NYSE:ULS",
       "NYSE:UMC",
       "NYSE:UMH",
-      "NYSE:UNF"
-    ]
-  },
-  {
-    "groupId": 25,
-    "symbols": [
+      "NYSE:UNF",
       "NYSE:UNFI",
       "NYSE:UNH",
       "NYSE:UNM",
@@ -4151,7 +4156,12 @@
       "AMEX:BESS",
       "AMEX:BESS.W",
       "AMEX:BGI",
-      "AMEX:BHB",
+      "AMEX:BHB"
+    ]
+  },
+  {
+    "groupId": 27,
+    "symbols": [
       "AMEX:BHM",
       "AMEX:BKTI",
       "AMEX:BMNR",
@@ -4196,12 +4206,7 @@
       "AMEX:DVS",
       "AMEX:DXF",
       "AMEX:EAD",
-      "AMEX:ECF"
-    ]
-  },
-  {
-    "groupId": 26,
-    "symbols": [
+      "AMEX:ECF",
       "AMEX:ECF$A",
       "AMEX:EGG",
       "AMEX:EIM",
@@ -4311,7 +4316,12 @@
       "AMEX:MYND",
       "AMEX:MYO",
       "AMEX:NAK",
-      "AMEX:NBH",
+      "AMEX:NBH"
+    ]
+  },
+  {
+    "groupId": 28,
+    "symbols": [
       "AMEX:NBY",
       "AMEX:NCL",
       "AMEX:NEN",
@@ -4364,12 +4374,7 @@
       "AMEX:RCG",
       "AMEX:REED",
       "AMEX:REI",
-      "AMEX:REPX"
-    ]
-  },
-  {
-    "groupId": 27,
-    "symbols": [
+      "AMEX:REPX",
       "AMEX:RGNT",
       "AMEX:RLGT",
       "AMEX:ROLR",
@@ -4471,40 +4476,37 @@
       "ASX:A1M",
       "ASX:A1N",
       "ASX:A2M",
-      "ASX:A3D",
+      "ASX:A3D"
+    ]
+  },
+  {
+    "groupId": 29,
+    "symbols": [
       "ASX:A4N",
       "ASX:A8G",
       "ASX:AA2",
       "ASX:AAC",
       "ASX:AAI",
       "ASX:AAJ",
-      "ASX:AAL",
       "ASX:AAM",
-      "ASX:AAP",
       "ASX:AAR",
       "ASX:AAU",
       "ASX:ABB",
       "ASX:ABE",
-      "ASX:ABG",
       "ASX:ABR",
       "ASX:ABV",
-      "ASX:ABX",
       "ASX:ABY",
       "ASX:AC2",
       "ASX:AC3",
       "ASX:ACE",
       "ASX:ACF",
       "ASX:ACL",
-      "ASX:ACM",
       "ASX:ACP",
       "ASX:ACQ",
-      "ASX:ACR",
       "ASX:ACS",
-      "ASX:ACU",
       "ASX:ACW",
       "ASX:AD1",
       "ASX:AD8",
-      "ASX:ADC",
       "ASX:ADD",
       "ASX:ADG",
       "ASX:ADH",
@@ -4512,16 +4514,9 @@
       "ASX:ADO",
       "ASX:ADR",
       "ASX:ADS",
-      "ASX:ADV",
       "ASX:ADX",
       "ASX:ADY",
-      "ASX:AEE",
-      "ASX:AEF",
-      "ASX:AEG",
-      "ASX:AEI",
       "ASX:AEL",
-      "ASX:AEM",
-      "ASX:AER",
       "ASX:AEU",
       "ASX:AEV",
       "ASX:AF2",
@@ -4530,21 +4525,12 @@
       "ASX:AF6",
       "ASX:AF7",
       "ASX:AFA",
-      "ASX:AFG",
       "ASX:AFI",
-      "ASX:AFL"
-    ]
-  },
-  {
-    "groupId": 28,
-    "symbols": [
       "ASX:AFP",
       "ASX:AFT",
       "ASX:AGC",
       "ASX:AGD",
       "ASX:AGE",
-      "ASX:AGI",
-      "ASX:AGL",
       "ASX:AGN",
       "ASX:AGR",
       "ASX:AGY",
@@ -4557,44 +4543,26 @@
       "ASX:AI1",
       "ASX:AIA",
       "ASX:AIH",
-      "ASX:AII",
-      "ASX:AIM",
       "ASX:AIQ",
       "ASX:AIS",
-      "ASX:AIV",
-      "ASX:AIZ",
       "ASX:AJL",
       "ASX:AJX",
-      "ASX:AKA",
       "ASX:AKG",
       "ASX:AKM",
       "ASX:AKN",
       "ASX:AKO",
       "ASX:AL3",
       "ASX:ALA",
-      "ASX:ALB",
-      "ASX:ALC",
       "ASX:ALD",
       "ASX:ALI",
-      "ASX:ALK",
-      "ASX:ALL",
-      "ASX:ALM",
       "ASX:ALQ",
       "ASX:ALR",
-      "ASX:ALV",
-      "ASX:ALX",
       "ASX:ALY",
       "ASX:AM5",
       "ASX:AM7",
       "ASX:AMA",
-      "ASX:AMC",
-      "ASX:AMD",
-      "ASX:AMH",
       "ASX:AMI",
-      "ASX:AMN",
       "ASX:AMO",
-      "ASX:AMP",
-      "ASX:AMS",
       "ASX:AMU",
       "ASX:AMX",
       "ASX:AN1",
@@ -4611,11 +4579,8 @@
       "ASX:AOA",
       "ASX:AOF",
       "ASX:AOK",
-      "ASX:AON",
       "ASX:AOV",
       "ASX:AP2",
-      "ASX:APA",
-      "ASX:APC",
       "ASX:APE",
       "ASX:APL",
       "ASX:APW",
@@ -4624,7 +4589,6 @@
       "ASX:AQC",
       "ASX:AQD",
       "ASX:AQI",
-      "ASX:AQN",
       "ASX:AQX",
       "ASX:AQZ",
       "ASX:AR1",
@@ -4636,22 +4600,14 @@
       "ASX:ARD",
       "ASX:ARF",
       "ASX:ARG",
-      "ASX:ARI",
-      "ASX:ARL",
       "ASX:ARN",
-      "ASX:ARR",
       "ASX:ART",
       "ASX:ARU",
       "ASX:ARV",
-      "ASX:ARX",
       "ASX:AS1",
       "ASX:AS2",
-      "ASX:ASB",
-      "ASX:ASG",
-      "ASX:ASH",
       "ASX:ASK",
       "ASX:ASL",
-      "ASX:ASM",
       "ASX:ASN",
       "ASX:ASP",
       "ASX:ASQ",
@@ -4666,32 +4622,29 @@
       "ASX:ATH",
       "ASX:ATM",
       "ASX:ATP",
-      "ASX:ATR",
-      "ASX:ATS",
       "ASX:ATT",
       "ASX:ATV",
       "ASX:ATX",
       "ASX:AU1",
       "ASX:AUA",
-      "ASX:AUB",
       "ASX:AUC",
       "ASX:AUE",
       "ASX:AUG",
       "ASX:AUI",
       "ASX:AUK",
       "ASX:AUQ",
-      "ASX:AUR",
       "ASX:AUV",
       "ASX:AUZ",
       "ASX:AV1",
-      "ASX:AVA",
-      "ASX:AVD",
-      "ASX:AVE",
+      "ASX:AVE"
+    ]
+  },
+  {
+    "groupId": 30,
+    "symbols": [
       "ASX:AVG",
       "ASX:AVH",
-      "ASX:AVL",
       "ASX:AVM",
-      "ASX:AVR",
       "ASX:AVW",
       "ASX:AW1",
       "ASX:AWJ",
@@ -4700,44 +4653,31 @@
       "ASX:AXE",
       "ASX:AXI",
       "ASX:AXL",
-      "ASX:AXN"
-    ]
-  },
-  {
-    "groupId": 29,
-    "symbols": [
-      "ASX:AXP",
+      "ASX:AXN",
       "ASX:AYA",
       "ASX:AYM",
       "ASX:AYT",
       "ASX:AYU",
       "ASX:AZ9",
-      "ASX:AZI",
       "ASX:AZJ",
       "ASX:AZY",
       "ASX:B01",
       "ASX:B4P",
       "ASX:BA2",
-      "ASX:BAK",
-      "ASX:BAP",
       "ASX:BAS",
       "ASX:BB1",
       "ASX:BBC",
       "ASX:BBL",
       "ASX:BBN",
-      "ASX:BBT",
       "ASX:BC8",
       "ASX:BCA",
       "ASX:BCB",
-      "ASX:BCC",
       "ASX:BCI",
       "ASX:BCK",
       "ASX:BCM",
       "ASX:BCN",
       "ASX:BDM",
-      "ASX:BDX",
       "ASX:BEL",
-      "ASX:BEN",
       "ASX:BEO",
       "ASX:BET",
       "ASX:BEZ",
@@ -4746,24 +4686,18 @@
       "ASX:BGA",
       "ASX:BGD",
       "ASX:BGE",
-      "ASX:BGL",
       "ASX:BGP",
       "ASX:BGT",
       "ASX:BHD",
       "ASX:BHL",
-      "ASX:BHM",
       "ASX:BHP",
       "ASX:BIM",
-      "ASX:BIO",
-      "ASX:BIS",
-      "ASX:BIT",
       "ASX:BKB",
       "ASX:BKI",
       "ASX:BKT",
       "ASX:BKY",
       "ASX:BLG",
       "ASX:BLU",
-      "ASX:BLX",
       "ASX:BLZ",
       "ASX:BM1",
       "ASX:BM8",
@@ -4771,15 +4705,11 @@
       "ASX:BMG",
       "ASX:BMH",
       "ASX:BML",
-      "ASX:BMM",
       "ASX:BMN",
-      "ASX:BMR",
       "ASX:BMT",
-      "ASX:BNL",
       "ASX:BNR",
       "ASX:BNZ",
       "ASX:BOA",
-      "ASX:BOC",
       "ASX:BOE",
       "ASX:BOL",
       "ASX:BOQ",
@@ -4796,29 +4726,21 @@
       "ASX:BRI",
       "ASX:BRK",
       "ASX:BRL",
-      "ASX:BRN",
       "ASX:BRU",
-      "ASX:BRX",
       "ASX:BRY",
       "ASX:BS1",
       "ASX:BSA",
       "ASX:BSL",
       "ASX:BSN",
-      "ASX:BSX",
       "ASX:BTC",
-      "ASX:BTE",
-      "ASX:BTI",
       "ASX:BTL",
-      "ASX:BTM",
       "ASX:BTN",
       "ASX:BTR",
       "ASX:BUB",
-      "ASX:BUR",
       "ASX:BUS",
       "ASX:BUX",
       "ASX:BUY",
       "ASX:BVR",
-      "ASX:BVS",
       "ASX:BW6",
       "ASX:BWF",
       "ASX:BWN",
@@ -4830,29 +4752,22 @@
       "ASX:C79",
       "ASX:C7A",
       "ASX:CAA",
-      "ASX:CAE",
       "ASX:CAF",
       "ASX:CAM",
       "ASX:CAN",
       "ASX:CAQ",
-      "ASX:CAR",
-      "ASX:CAT",
       "ASX:CAV",
       "ASX:CAY",
       "ASX:CAZ",
       "ASX:CBA",
       "ASX:CBE",
-      "ASX:CBL",
       "ASX:CBO",
       "ASX:CBY",
       "ASX:CC5",
       "ASX:CC9",
       "ASX:CCA",
       "ASX:CCE",
-      "ASX:CCG",
-      "ASX:CCL",
       "ASX:CCM",
-      "ASX:CCO",
       "ASX:CCP",
       "ASX:CCR",
       "ASX:CCV",
@@ -4861,19 +4776,11 @@
       "ASX:CD2",
       "ASX:CD3",
       "ASX:CDA",
-      "ASX:CDE",
       "ASX:CDM",
       "ASX:CDO",
-      "ASX:CDP",
       "ASX:CDR",
-      "ASX:CDT",
       "ASX:CEH",
-      "ASX:CEL"
-    ]
-  },
-  {
-    "groupId": 30,
-    "symbols": [
+      "ASX:CEL",
       "ASX:CEN",
       "ASX:CF1",
       "ASX:CG1",
@@ -4886,13 +4793,15 @@
       "ASX:CHL",
       "ASX:CHM",
       "ASX:CHN",
-      "ASX:CHR",
       "ASX:CHW",
-      "ASX:CIA",
-      "ASX:CIM",
       "ASX:CIN",
       "ASX:CIP",
-      "ASX:CIW",
+      "ASX:CIW"
+    ]
+  },
+  {
+    "groupId": 31,
+    "symbols": [
       "ASX:CKA",
       "ASX:CKF",
       "ASX:CL8",
@@ -4900,28 +4809,21 @@
       "ASX:CLG",
       "ASX:CLU",
       "ASX:CLV",
-      "ASX:CLW",
-      "ASX:CLX",
       "ASX:CLZ",
       "ASX:CMA",
       "ASX:CMB",
       "ASX:CMD",
-      "ASX:CMG",
       "ASX:CML",
       "ASX:CMM",
       "ASX:CMO",
-      "ASX:CMP",
       "ASX:CMW",
       "ASX:CMX",
       "ASX:CNB",
       "ASX:CND",
-      "ASX:CNI",
       "ASX:CNJ",
-      "ASX:CNQ",
       "ASX:CNU",
       "ASX:COB",
       "ASX:COD",
-      "ASX:COF",
       "ASX:COG",
       "ASX:COH",
       "ASX:COI",
@@ -4944,25 +4846,18 @@
       "ASX:CR9",
       "ASX:CRB",
       "ASX:CRD",
-      "ASX:CRI",
       "ASX:CRN",
       "ASX:CRR",
-      "ASX:CRS",
       "ASX:CSC",
-      "ASX:CSL",
       "ASX:CST",
-      "ASX:CSX",
       "ASX:CT1",
       "ASX:CTD",
       "ASX:CTE",
-      "ASX:CTM",
       "ASX:CTN",
-      "ASX:CTO",
       "ASX:CTP",
       "ASX:CTQ",
       "ASX:CTT",
       "ASX:CU6",
-      "ASX:CUE",
       "ASX:CUF",
       "ASX:CUL",
       "ASX:CUP",
@@ -4971,8 +4866,6 @@
       "ASX:CVC",
       "ASX:CVL",
       "ASX:CVN",
-      "ASX:CVR",
-      "ASX:CVV",
       "ASX:CVW",
       "ASX:CWP",
       "ASX:CWY",
@@ -4989,18 +4882,15 @@
       "ASX:CYP",
       "ASX:CYQ",
       "ASX:CZN",
-      "ASX:CZR",
       "ASX:D10",
       "ASX:D3E",
       "ASX:DA8",
       "ASX:DA9",
       "ASX:DAF",
       "ASX:DAI",
-      "ASX:DAL",
       "ASX:DAM",
       "ASX:DAT",
       "ASX:DBF",
-      "ASX:DBI",
       "ASX:DBO",
       "ASX:DCC",
       "ASX:DDR",
@@ -5023,8 +4913,6 @@
       "ASX:DMP",
       "ASX:DN1",
       "ASX:DNL",
-      "ASX:DOC",
-      "ASX:DOW",
       "ASX:DPM",
       "ASX:DRE",
       "ASX:DRO",
@@ -5032,16 +4920,9 @@
       "ASX:DRX",
       "ASX:DSK",
       "ASX:DSM",
-      "ASX:DTI",
       "ASX:DTL",
-      "ASX:DTM",
       "ASX:DTR",
-      "ASX:DTZ"
-    ]
-  },
-  {
-    "groupId": 31,
-    "symbols": [
+      "ASX:DTZ",
       "ASX:DUB",
       "ASX:DUG",
       "ASX:DUI",
@@ -5052,7 +4933,6 @@
       "ASX:DWG",
       "ASX:DXA",
       "ASX:DXB",
-      "ASX:DXC",
       "ASX:DXI",
       "ASX:DXN",
       "ASX:DXS",
@@ -5064,63 +4944,52 @@
       "ASX:EBO",
       "ASX:EBR",
       "ASX:ECH",
-      "ASX:ECL",
       "ASX:ECP",
       "ASX:ECS",
       "ASX:ECT",
       "ASX:EDE",
-      "ASX:EDU",
       "ASX:EDV",
       "ASX:EE1",
       "ASX:EFE",
       "ASX:EG1",
       "ASX:EGA",
-      "ASX:EGG",
       "ASX:EGH",
       "ASX:EGL",
       "ASX:EGR",
-      "ASX:EGY",
-      "ASX:EHL",
+      "ASX:EHL"
+    ]
+  },
+  {
+    "groupId": 32,
+    "symbols": [
       "ASX:EIQ",
       "ASX:EL8",
       "ASX:ELD",
-      "ASX:ELS",
       "ASX:ELT",
-      "ASX:ELV",
       "ASX:EM2",
       "ASX:EM3",
-      "ASX:EMA",
       "ASX:EMB",
       "ASX:EMC",
       "ASX:EMD",
-      "ASX:EME",
       "ASX:EMH",
       "ASX:EMI",
-      "ASX:EML",
-      "ASX:EMN",
       "ASX:EMP",
-      "ASX:EMR",
       "ASX:EMT",
       "ASX:EMU",
       "ASX:EMV",
       "ASX:ENL",
       "ASX:ENN",
       "ASX:ENP",
-      "ASX:ENR",
       "ASX:ENT",
       "ASX:ENV",
       "ASX:ENX",
       "ASX:EOL",
       "ASX:EOS",
       "ASX:EPI",
-      "ASX:EPM",
       "ASX:EPN",
       "ASX:EPX",
       "ASX:EPY",
-      "ASX:EQR",
-      "ASX:EQT",
       "ASX:EQU",
-      "ASX:EQX",
       "ASX:ERA",
       "ASX:ERD",
       "ASX:ERE",
@@ -5137,15 +5006,11 @@
       "ASX:EVG",
       "ASX:EVN",
       "ASX:EVO",
-      "ASX:EVR",
       "ASX:EVT",
       "ASX:EVZ",
       "ASX:EWC",
       "ASX:EXL",
-      "ASX:EXP",
-      "ASX:EXR",
       "ASX:EXT",
-      "ASX:EYE",
       "ASX:EZL",
       "ASX:EZZ",
       "ASX:FAL",
@@ -5175,7 +5040,6 @@
       "ASX:FIN",
       "ASX:FL1",
       "ASX:FLC",
-      "ASX:FLG",
       "ASX:FLN",
       "ASX:FLT",
       "ASX:FLX",
@@ -5187,12 +5051,10 @@
       "ASX:FMG",
       "ASX:FML",
       "ASX:FMR",
-      "ASX:FND",
       "ASX:FNR",
       "ASX:FNX",
       "ASX:FOS",
       "ASX:FPC",
-      "ASX:FPH",
       "ASX:FPR",
       "ASX:FRB",
       "ASX:FRE",
@@ -5202,15 +5064,6 @@
       "ASX:FRW",
       "ASX:FRX",
       "ASX:FSA",
-      "ASX:FSI",
-      "ASX:FTI",
-      "ASX:FUL"
-    ]
-  },
-  {
-    "groupId": 32,
-    "symbols": [
-      "ASX:FUN",
       "ASX:FWD",
       "ASX:FXG",
       "ASX:FZR",
@@ -5221,11 +5074,9 @@
       "ASX:G88",
       "ASX:GA8",
       "ASX:GAL",
-      "ASX:GAP",
       "ASX:GAS",
       "ASX:GBE",
       "ASX:GBM",
-      "ASX:GBR",
       "ASX:GC1",
       "ASX:GCI",
       "ASX:GCM",
@@ -5237,20 +5088,14 @@
       "ASX:GDR",
       "ASX:GED",
       "ASX:GEM",
-      "ASX:GEN",
       "ASX:GES",
-      "ASX:GFL",
       "ASX:GG1",
       "ASX:GG8",
       "ASX:GGE",
       "ASX:GGP",
-      "ASX:GGR",
-      "ASX:GHM",
       "ASX:GHY",
-      "ASX:GIB",
       "ASX:GL1",
       "ASX:GLB",
-      "ASX:GLE",
       "ASX:GLF",
       "ASX:GLH",
       "ASX:GLL",
@@ -5261,7 +5106,6 @@
       "ASX:GML",
       "ASX:GMN",
       "ASX:GNC",
-      "ASX:GNE",
       "ASX:GNG",
       "ASX:GNM",
       "ASX:GNP",
@@ -5272,20 +5116,22 @@
       "ASX:GQG",
       "ASX:GR8",
       "ASX:GRE",
-      "ASX:GRL",
+      "ASX:GRL"
+    ]
+  },
+  {
+    "groupId": 33,
+    "symbols": [
       "ASX:GRR",
       "ASX:GRV",
       "ASX:GRX",
-      "ASX:GSM",
       "ASX:GSN",
       "ASX:GSS",
       "ASX:GT1",
       "ASX:GT3",
-      "ASX:GTE",
       "ASX:GTG",
       "ASX:GTI",
       "ASX:GTK",
-      "ASX:GTN",
       "ASX:GUL",
       "ASX:GUM",
       "ASX:GVF",
@@ -5295,9 +5141,7 @@
       "ASX:GYG",
       "ASX:H2G",
       "ASX:H3E",
-      "ASX:HAL",
       "ASX:HAR",
-      "ASX:HAS",
       "ASX:HAV",
       "ASX:HAW",
       "ASX:HC1",
@@ -5316,18 +5160,13 @@
       "ASX:HHR",
       "ASX:HIO",
       "ASX:HIQ",
-      "ASX:HIT",
-      "ASX:HLI",
       "ASX:HLO",
       "ASX:HLS",
-      "ASX:HLX",
       "ASX:HM1",
-      "ASX:HMC",
       "ASX:HMD",
       "ASX:HMG",
       "ASX:HMI",
       "ASX:HMX",
-      "ASX:HMY",
       "ASX:HOR",
       "ASX:HPC",
       "ASX:HPG",
@@ -5340,30 +5179,22 @@
       "ASX:HTG",
       "ASX:HTM",
       "ASX:HUB",
-      "ASX:HUM",
       "ASX:HVN",
       "ASX:HVY",
       "ASX:HWK",
-      "ASX:HXL",
       "ASX:HYD",
       "ASX:HYT",
       "ASX:HZN",
       "ASX:HZR",
       "ASX:I88",
-      "ASX:IAG",
       "ASX:IAM",
       "ASX:IBC",
       "ASX:IBK",
       "ASX:IBR",
       "ASX:IBX",
-      "ASX:ICE",
       "ASX:ICI",
-      "ASX:ICL",
       "ASX:ICR",
-      "ASX:ICU",
       "ASX:ID8",
-      "ASX:IDA",
-      "ASX:IDT",
       "ASX:IDX",
       "ASX:IEL",
       "ASX:IEQ",
@@ -5372,12 +5203,7 @@
       "ASX:IFL",
       "ASX:IFN",
       "ASX:IFT",
-      "ASX:IFX"
-    ]
-  },
-  {
-    "groupId": 33,
-    "symbols": [
+      "ASX:IFX",
       "ASX:IG6",
       "ASX:IGL",
       "ASX:IGN",
@@ -5387,7 +5213,6 @@
       "ASX:ILA",
       "ASX:ILT",
       "ASX:ILU",
-      "ASX:IMA",
       "ASX:IMB",
       "ASX:IMC",
       "ASX:IMD",
@@ -5399,9 +5224,6 @@
       "ASX:INA",
       "ASX:IND",
       "ASX:INF",
-      "ASX:ING",
-      "ASX:INR",
-      "ASX:INV",
       "ASX:IOD",
       "ASX:ION",
       "ASX:IOV",
@@ -5412,16 +5234,13 @@
       "ASX:IPT",
       "ASX:IPX",
       "ASX:IR1",
-      "ASX:IRD",
       "ASX:IRE",
       "ASX:IRI",
       "ASX:IS3",
       "ASX:ITM",
       "ASX:ITS",
       "ASX:IVG",
-      "ASX:IVR",
       "ASX:IVX",
-      "ASX:IVZ",
       "ASX:IXC",
       "ASX:IXR",
       "ASX:JAL",
@@ -5433,15 +5252,12 @@
       "ASX:JCS",
       "ASX:JDO",
       "ASX:JGH",
-      "ASX:JHX",
       "ASX:JIN",
-      "ASX:JLL",
       "ASX:JMS",
       "ASX:JNO",
       "ASX:JNS",
       "ASX:JPR",
       "ASX:JYC",
-      "ASX:KAI",
       "ASX:KAL",
       "ASX:KAM",
       "ASX:KAO",
@@ -5451,7 +5267,6 @@
       "ASX:KBC",
       "ASX:KCC",
       "ASX:KCN",
-      "ASX:KEY",
       "ASX:KFM",
       "ASX:KFW",
       "ASX:KGL",
@@ -5461,7 +5276,12 @@
       "ASX:KIT",
       "ASX:KKC",
       "ASX:KKO",
-      "ASX:KLI",
+      "ASX:KLI"
+    ]
+  },
+  {
+    "groupId": 34,
+    "symbols": [
       "ASX:KLR",
       "ASX:KLS",
       "ASX:KLV",
@@ -5540,12 +5360,7 @@
       "BATS:AUGP",
       "BATS:AUGT",
       "BATS:AUGU",
-      "BATS:AUGW"
-    ]
-  },
-  {
-    "groupId": 34,
-    "symbols": [
+      "BATS:AUGW",
       "BATS:AUGZ",
       "BATS:AVGW",
       "BATS:AVRY",
@@ -5584,7 +5399,6 @@
       "BATS:BEMB",
       "BATS:BESF",
       "BATS:BEX",
-      "BATS:BEZ",
       "BATS:BFEB",
       "BATS:BFLB",
       "BATS:BGLD",
@@ -5622,7 +5436,12 @@
       "BATS:BUFB",
       "BATS:BUFD",
       "BATS:BUFF",
-      "BATS:BUFG",
+      "BATS:BUFG"
+    ]
+  },
+  {
+    "groupId": 35,
+    "symbols": [
       "BATS:BUFH",
       "BATS:BUFP",
       "BATS:BUFQ",
@@ -5708,12 +5527,7 @@
       "BATS:DDNQ",
       "BATS:DDSQ",
       "BATS:DDTD",
-      "BATS:DDTF"
-    ]
-  },
-  {
-    "groupId": 35,
-    "symbols": [
+      "BATS:DDTF",
       "BATS:DDTJ",
       "BATS:DDTL",
       "BATS:DDTM",
@@ -5772,7 +5586,6 @@
       "BATS:EAOK",
       "BATS:EAOM",
       "BATS:EAOR",
-      "BATS:ECH",
       "BATS:EDEN",
       "BATS:EDGE",
       "BATS:EEMV",
@@ -5783,7 +5596,12 @@
       "BATS:EFV",
       "BATS:EGUS",
       "BATS:EHY",
-      "BATS:EMDV",
+      "BATS:EMDV"
+    ]
+  },
+  {
+    "groupId": 36,
+    "symbols": [
       "BATS:EMGF",
       "BATS:EMHY",
       "BATS:EMTL",
@@ -5795,7 +5613,6 @@
       "BATS:ESG",
       "BATS:ESGG",
       "BATS:ESGV",
-      "BATS:ESK",
       "BATS:ESML",
       "BATS:ETHU",
       "BATS:ETHV",
@@ -5876,12 +5693,7 @@
       "BATS:FPAG",
       "BATS:FPAS",
       "BATS:FPFD",
-      "BATS:FPRO"
-    ]
-  },
-  {
-    "groupId": 36,
-    "symbols": [
+      "BATS:FPRO",
       "BATS:FRDM",
       "BATS:FRNW",
       "BATS:FSEP",
@@ -5944,7 +5756,12 @@
       "BATS:HEEM",
       "BATS:HEFA",
       "BATS:HEGD",
-      "BATS:HELX",
+      "BATS:HELX"
+    ]
+  },
+  {
+    "groupId": 37,
+    "symbols": [
       "BATS:HEMI",
       "BATS:HFGO",
       "BATS:HFSI",
@@ -5955,7 +5772,6 @@
       "BATS:HTUS",
       "BATS:HUMN",
       "BATS:HYBL",
-      "BATS:HYD",
       "BATS:HYDB",
       "BATS:HYGW",
       "BATS:HYHG",
@@ -6014,7 +5830,6 @@
       "BATS:ISVL",
       "BATS:ITA",
       "BATS:ITB",
-      "BATS:ITM",
       "BATS:ITOL",
       "BATS:ITWO",
       "BATS:IVVB",
@@ -6044,12 +5859,7 @@
       "BATS:JCPI",
       "BATS:JEMA",
       "BATS:JMST",
-      "BATS:JMUB"
-    ]
-  },
-  {
-    "groupId": 37,
-    "symbols": [
+      "BATS:JMUB",
       "BATS:JNEU",
       "BATS:JOBX",
       "BATS:JOYT",
@@ -6085,7 +5895,6 @@
       "BATS:KJUN",
       "BATS:KMAR",
       "BATS:KMAY",
-      "BATS:KNG",
       "BATS:KNOV",
       "BATS:KNOW",
       "BATS:KOCT",
@@ -6107,7 +5916,12 @@
       "BATS:LENS",
       "BATS:LEUX",
       "BATS:LFAI",
-      "BATS:LFAO",
+      "BATS:LFAO"
+    ]
+  },
+  {
+    "groupId": 38,
+    "symbols": [
       "BATS:LFAW",
       "BATS:LFBE",
       "BATS:LFDR",
@@ -6212,12 +6026,7 @@
       "BATS:NELS",
       "BATS:NERD",
       "BATS:NFEB",
-      "BATS:NFLP"
-    ]
-  },
-  {
-    "groupId": 38,
-    "symbols": [
+      "BATS:NFLP",
       "BATS:NFLU",
       "BATS:NFLW",
       "BATS:NIHI",
@@ -6267,7 +6076,12 @@
       "BATS:OCTU",
       "BATS:OCTW",
       "BATS:OCTZ",
-      "BATS:OILK",
+      "BATS:OILK"
+    ]
+  },
+  {
+    "groupId": 39,
+    "symbols": [
       "BATS:OMFL",
       "BATS:OMFS",
       "BATS:ONDL",
@@ -6380,12 +6194,7 @@
       "BATS:QCJL",
       "BATS:QCOC",
       "BATS:QDEC",
-      "BATS:QDTE"
-    ]
-  },
-  {
-    "groupId": 39,
-    "symbols": [
+      "BATS:QDTE",
       "BATS:QETH",
       "BATS:QFHD",
       "BATS:QFRD",
@@ -6427,7 +6236,12 @@
       "BATS:ROMO",
       "BATS:RPHS",
       "BATS:RSBA",
-      "BATS:RSBT",
+      "BATS:RSBT"
+    ]
+  },
+  {
+    "groupId": 40,
+    "symbols": [
       "BATS:RSBY",
       "BATS:RSEE",
       "BATS:RSSB",
@@ -6548,12 +6362,7 @@
       "BATS:TMFC",
       "BATS:TMFE",
       "BATS:TMFG",
-      "BATS:TMFM"
-    ]
-  },
-  {
-    "groupId": 40,
-    "symbols": [
+      "BATS:TMFM",
       "BATS:TMFS",
       "BATS:TMFX",
       "BATS:TOCT",
@@ -6587,7 +6396,12 @@
       "BATS:UDEC",
       "BATS:UFEB",
       "BATS:UFOD",
-      "BATS:UJAN",
+      "BATS:UJAN"
+    ]
+  },
+  {
+    "groupId": 41,
+    "symbols": [
       "BATS:UJUL",
       "BATS:UJUN",
       "BATS:UMAR",
@@ -6716,12 +6530,7 @@
       "BATS:ZMAY",
       "BATS:ZNOV",
       "BATS:ZOCT",
-      "BATS:ZSEP"
-    ]
-  },
-  {
-    "groupId": 41,
-    "symbols": [
+      "BATS:ZSEP",
       "BATS:ZVOL",
       "NYSE:ACLO",
       "NYSE:AKAF",
@@ -6747,7 +6556,12 @@
       "NYSE:FXED",
       "NYSE:GDIV",
       "NYSE:GMMF",
-      "NYSE:GYLD",
+      "NYSE:GYLD"
+    ]
+  },
+  {
+    "groupId": 42,
+    "symbols": [
       "NYSE:HF",
       "NYSE:HFEQ",
       "NYSE:HFGM",
@@ -6830,7 +6644,6 @@
       "NYSEARCA:AIEQ",
       "NYSEARCA:AINP",
       "NYSEARCA:AINT",
-      "NYSEARCA:AIS",
       "NYSEARCA:AIUP",
       "NYSEARCA:AIVC",
       "NYSEARCA:AIVI",
@@ -6848,8 +6661,6 @@
       "NYSEARCA:AMZA",
       "NYSEARCA:AMZY",
       "NYSEARCA:ANEW",
-      "NYSEARCA:AOA",
-      "NYSEARCA:AOK",
       "NYSEARCA:AOM",
       "NYSEARCA:AOR",
       "NYSEARCA:AOTS",
@@ -6859,7 +6670,6 @@
       "NYSEARCA:APLY",
       "NYSEARCA:APMU",
       "NYSEARCA:APUE",
-      "NYSEARCA:ARB",
       "NYSEARCA:ARGT",
       "NYSEARCA:ARMH",
       "NYSEARCA:ARP",
@@ -6884,12 +6694,7 @@
       "NYSEARCA:AVEE",
       "NYSEARCA:AVEM",
       "NYSEARCA:AVES",
-      "NYSEARCA:AVGE"
-    ]
-  },
-  {
-    "groupId": 42,
-    "symbols": [
+      "NYSEARCA:AVGE",
       "NYSEARCA:AVGV",
       "NYSEARCA:AVIE",
       "NYSEARCA:AVIG",
@@ -6911,7 +6716,12 @@
       "NYSEARCA:AVTM",
       "NYSEARCA:AVUS",
       "NYSEARCA:AVUV",
-      "NYSEARCA:AWAY",
+      "NYSEARCA:AWAY"
+    ]
+  },
+  {
+    "groupId": 43,
+    "symbols": [
       "NYSEARCA:AZTD",
       "NYSEARCA:BAB",
       "NYSEARCA:BABO",
@@ -6921,7 +6731,6 @@
       "NYSEARCA:BBBI",
       "NYSEARCA:BBBL",
       "NYSEARCA:BBBS",
-      "NYSEARCA:BBC",
       "NYSEARCA:BBCB",
       "NYSEARCA:BBHL",
       "NYSEARCA:BBHM",
@@ -6932,7 +6741,6 @@
       "NYSEARCA:BCD",
       "NYSEARCA:BCDF",
       "NYSEARCA:BCHI",
-      "NYSEARCA:BCI",
       "NYSEARCA:BCIL",
       "NYSEARCA:BCOR",
       "NYSEARCA:BCPL",
@@ -7017,7 +6825,6 @@
       "NYSEARCA:BOIL",
       "NYSEARCA:BOUT",
       "NYSEARCA:BPAY",
-      "NYSEARCA:BPH",
       "NYSEARCA:BPI",
       "NYSEARCA:BPRO",
       "NYSEARCA:BRAZ",
@@ -7030,11 +6837,9 @@
       "NYSEARCA:BSTP",
       "NYSEARCA:BSV",
       "NYSEARCA:BTAL",
-      "NYSEARCA:BTC",
       "NYSEARCA:BTCC",
       "NYSEARCA:BTOP",
       "NYSEARCA:BTOT",
-      "NYSEARCA:BTR",
       "NYSEARCA:BTRN",
       "NYSEARCA:BTYB",
       "NYSEARCA:BUCK",
@@ -7052,14 +6857,8 @@
       "NYSEARCA:BYRE",
       "NYSEARCA:BZQ",
       "NYSEARCA:CAAA",
-      "NYSEARCA:CAFX"
-    ]
-  },
-  {
-    "groupId": 43,
-    "symbols": [
+      "NYSEARCA:CAFX",
       "NYSEARCA:CAIE",
-      "NYSEARCA:CAM",
       "NYSEARCA:CAML",
       "NYSEARCA:CAMX",
       "NYSEARCA:CANE",
@@ -7077,7 +6876,12 @@
       "NYSEARCA:CCOR",
       "NYSEARCA:CCRP",
       "NYSEARCA:CDEI",
-      "NYSEARCA:CDX",
+      "NYSEARCA:CDX"
+    ]
+  },
+  {
+    "groupId": 44,
+    "symbols": [
       "NYSEARCA:CEF",
       "NYSEARCA:CEFD",
       "NYSEARCA:CERY",
@@ -7211,7 +7015,6 @@
       "NYSEARCA:DAMD",
       "NYSEARCA:DANA",
       "NYSEARCA:DARP",
-      "NYSEARCA:DAT",
       "NYSEARCA:DBA",
       "NYSEARCA:DBAW",
       "NYSEARCA:DBB",
@@ -7220,16 +7023,10 @@
       "NYSEARCA:DBEF",
       "NYSEARCA:DBEM",
       "NYSEARCA:DBEU",
-      "NYSEARCA:DBEZ"
-    ]
-  },
-  {
-    "groupId": 44,
-    "symbols": [
+      "NYSEARCA:DBEZ",
       "NYSEARCA:DBJP",
       "NYSEARCA:DBMF",
       "NYSEARCA:DBND",
-      "NYSEARCA:DBO",
       "NYSEARCA:DBP",
       "NYSEARCA:DCMT",
       "NYSEARCA:DCOR",
@@ -7239,9 +7036,12 @@
       "NYSEARCA:DEEF",
       "NYSEARCA:DEEP",
       "NYSEARCA:DEFI",
-      "NYSEARCA:DEHP",
-      "NYSEARCA:DEM",
-      "NYSEARCA:DES",
+      "NYSEARCA:DEHP"
+    ]
+  },
+  {
+    "groupId": 45,
+    "symbols": [
       "NYSEARCA:DESK",
       "NYSEARCA:DEUS",
       "NYSEARCA:DEW",
@@ -7282,7 +7082,6 @@
       "NYSEARCA:DGIN",
       "NYSEARCA:DGRO",
       "NYSEARCA:DGS",
-      "NYSEARCA:DGT",
       "NYSEARCA:DHLX",
       "NYSEARCA:DHS",
       "NYSEARCA:DHSB",
@@ -7308,7 +7107,6 @@
       "NYSEARCA:DLS",
       "NYSEARCA:DMBS",
       "NYSEARCA:DMX",
-      "NYSEARCA:DNL",
       "NYSEARCA:DOG",
       "NYSEARCA:DOL",
       "NYSEARCA:DON",
@@ -7330,7 +7128,6 @@
       "NYSEARCA:DTEC",
       "NYSEARCA:DTH",
       "NYSEARCA:DTRE",
-      "NYSEARCA:DUG",
       "NYSEARCA:DUHP",
       "NYSEARCA:DUKQ",
       "NYSEARCA:DUKZ",
@@ -7375,7 +7172,6 @@
       "NYSEARCA:EDIV",
       "NYSEARCA:EDOG",
       "NYSEARCA:EDOW",
-      "NYSEARCA:EDV",
       "NYSEARCA:EDZ",
       "NYSEARCA:EELV",
       "NYSEARCA:EEM",
@@ -7388,12 +7184,7 @@
       "NYSEARCA:EEV",
       "NYSEARCA:EFA",
       "NYSEARCA:EFAA",
-      "NYSEARCA:EFAX"
-    ]
-  },
-  {
-    "groupId": 45,
-    "symbols": [
+      "NYSEARCA:EFAX",
       "NYSEARCA:EFFE",
       "NYSEARCA:EFFI",
       "NYSEARCA:EFIV",
@@ -7405,18 +7196,21 @@
       "NYSEARCA:EGLE",
       "NYSEARCA:EIDO",
       "NYSEARCA:EINC",
-      "NYSEARCA:EIPI",
+      "NYSEARCA:EIPI"
+    ]
+  },
+  {
+    "groupId": 46,
+    "symbols": [
       "NYSEARCA:EIPX",
       "NYSEARCA:EIRL",
       "NYSEARCA:EIS",
       "NYSEARCA:EJAN",
       "NYSEARCA:EJUL",
       "NYSEARCA:ELCV",
-      "NYSEARCA:ELD",
       "NYSEARCA:ELM",
       "NYSEARCA:EMBD",
       "NYSEARCA:EMBX",
-      "NYSEARCA:EMC",
       "NYSEARCA:EMCR",
       "NYSEARCA:EMCS",
       "NYSEARCA:EMDM",
@@ -7440,7 +7234,6 @@
       "NYSEARCA:EPAI",
       "NYSEARCA:EPEM",
       "NYSEARCA:EPHE",
-      "NYSEARCA:EPI",
       "NYSEARCA:EPIN",
       "NYSEARCA:EPMB",
       "NYSEARCA:EPMV",
@@ -7489,7 +7282,6 @@
       "NYSEARCA:EVSM",
       "NYSEARCA:EVX",
       "NYSEARCA:EWA",
-      "NYSEARCA:EWC",
       "NYSEARCA:EWD",
       "NYSEARCA:EWG",
       "NYSEARCA:EWH",
@@ -7526,7 +7318,6 @@
       "NYSEARCA:FBY",
       "NYSEARCA:FCBD",
       "NYSEARCA:FCFY",
-      "NYSEARCA:FCG",
       "NYSEARCA:FCOM",
       "NYSEARCA:FCOR",
       "NYSEARCA:FCSH",
@@ -7543,7 +7334,6 @@
       "NYSEARCA:FDMO",
       "NYSEARCA:FDN",
       "NYSEARCA:FDRR",
-      "NYSEARCA:FDV",
       "NYSEARCA:FDVV",
       "NYSEARCA:FEAC",
       "NYSEARCA:FEDM",
@@ -7556,12 +7346,7 @@
       "NYSEARCA:FENI",
       "NYSEARCA:FENY",
       "NYSEARCA:FESM",
-      "NYSEARCA:FEUS"
-    ]
-  },
-  {
-    "groupId": 46,
-    "symbols": [
+      "NYSEARCA:FEUS",
       "NYSEARCA:FEZ",
       "NYSEARCA:FFIU",
       "NYSEARCA:FFLS",
@@ -7571,7 +7356,12 @@
       "NYSEARCA:FGD",
       "NYSEARCA:FGDL",
       "NYSEARCA:FGSM",
-      "NYSEARCA:FHLC",
+      "NYSEARCA:FHLC"
+    ]
+  },
+  {
+    "groupId": 47,
+    "symbols": [
       "NYSEARCA:FHYS",
       "NYSEARCA:FIAT",
       "NYSEARCA:FIAX",
@@ -7652,7 +7442,6 @@
       "NYSEARCA:FQAL",
       "NYSEARCA:FREL",
       "NYSEARCA:FRGN",
-      "NYSEARCA:FRI",
       "NYSEARCA:FRIZ",
       "NYSEARCA:FRTY",
       "NYSEARCA:FSCC",
@@ -7690,14 +7479,12 @@
       "NYSEARCA:FUTY",
       "NYSEARCA:FVAL",
       "NYSEARCA:FVD",
-      "NYSEARCA:FWD",
       "NYSEARCA:FXA",
       "NYSEARCA:FXB",
       "NYSEARCA:FXC",
       "NYSEARCA:FXD",
       "NYSEARCA:FXE",
       "NYSEARCA:FXF",
-      "NYSEARCA:FXG",
       "NYSEARCA:FXH",
       "NYSEARCA:FXI",
       "NYSEARCA:FXL",
@@ -7711,7 +7498,6 @@
       "NYSEARCA:GABF",
       "NYSEARCA:GAEM",
       "NYSEARCA:GAID",
-      "NYSEARCA:GAL",
       "NYSEARCA:GAMR",
       "NYSEARCA:GARA",
       "NYSEARCA:GAUD",
@@ -7724,18 +7510,18 @@
       "NYSEARCA:GCAL",
       "NYSEARCA:GCC",
       "NYSEARCA:GCOR",
-      "NYSEARCA:GDLC"
-    ]
-  },
-  {
-    "groupId": 47,
-    "symbols": [
+      "NYSEARCA:GDLC",
       "NYSEARCA:GDOC",
       "NYSEARCA:GDOG",
       "NYSEARCA:GDX",
       "NYSEARCA:GDXD",
       "NYSEARCA:GDXJ",
-      "OANDA:SPX500USD",
+      "OANDA:SPX500USD"
+    ]
+  },
+  {
+    "groupId": 48,
+    "symbols": [
       "OANDA:NAS100USD",
       "OANDA:US30USD",
       "OANDA:US2000USD",
@@ -7769,181 +7555,6 @@
       "OANDA:COTTONUSD",
       "OANDA:SOYBEANUSD",
       "OANDA:COCOAUSD",
-      "FOREXCOM:SPX500USD",
-      "FOREXCOM:NAS100USD",
-      "FOREXCOM:US30USD",
-      "FOREXCOM:US2000USD",
-      "FOREXCOM:JP225USD",
-      "FOREXCOM:UK100GBP",
-      "FOREXCOM:DE40EUR",
-      "FOREXCOM:FRA40EUR",
-      "FOREXCOM:EU50EUR",
-      "FOREXCOM:ES35EUR",
-      "FOREXCOM:CH20CHF",
-      "FOREXCOM:NL25EUR",
-      "FOREXCOM:AU200AUD",
-      "FOREXCOM:HK33HKD",
-      "FOREXCOM:CN50USD",
-      "FOREXCOM:SG30SGD",
-      "FOREXCOM:IN50USD",
-      "FOREXCOM:USDX",
-      "FOREXCOM:VIX",
-      "FOREXCOM:XAUUSD",
-      "FOREXCOM:XAGUSD",
-      "FOREXCOM:XPTUSD",
-      "FOREXCOM:XPDUSD",
-      "FOREXCOM:BCOUSD",
-      "FOREXCOM:WTICOUSD",
-      "FOREXCOM:NATGASUSD",
-      "FOREXCOM:XCUUSD",
-      "FOREXCOM:CORNUSD",
-      "FOREXCOM:WHEATUSD",
-      "FOREXCOM:COFFEEUSD",
-      "FOREXCOM:SUGARUSD",
-      "FOREXCOM:COTTONUSD",
-      "FOREXCOM:SOYBEANUSD",
-      "FOREXCOM:COCOAUSD",
-      "CITYINDEX:SPX500USD",
-      "CITYINDEX:NAS100USD",
-      "CITYINDEX:US30USD",
-      "CITYINDEX:US2000USD",
-      "CITYINDEX:JP225USD",
-      "CITYINDEX:UK100GBP",
-      "CITYINDEX:DE40EUR",
-      "CITYINDEX:FRA40EUR",
-      "CITYINDEX:EU50EUR",
-      "CITYINDEX:ES35EUR",
-      "CITYINDEX:CH20CHF",
-      "CITYINDEX:NL25EUR",
-      "CITYINDEX:AU200AUD",
-      "CITYINDEX:HK33HKD",
-      "CITYINDEX:CN50USD",
-      "CITYINDEX:SG30SGD",
-      "CITYINDEX:IN50USD",
-      "CITYINDEX:USDX",
-      "CITYINDEX:VIX",
-      "CITYINDEX:XAUUSD",
-      "CITYINDEX:XAGUSD",
-      "CITYINDEX:XPTUSD",
-      "CITYINDEX:XPDUSD",
-      "CITYINDEX:BCOUSD",
-      "CITYINDEX:WTICOUSD",
-      "CITYINDEX:NATGASUSD",
-      "CITYINDEX:XCUUSD",
-      "CITYINDEX:CORNUSD",
-      "CITYINDEX:WHEATUSD",
-      "CITYINDEX:COFFEEUSD",
-      "CITYINDEX:SUGARUSD",
-      "CITYINDEX:COTTONUSD",
-      "CITYINDEX:SOYBEANUSD",
-      "CITYINDEX:COCOAUSD",
-      "PEPPERSTONE:SPX500USD",
-      "PEPPERSTONE:NAS100USD",
-      "PEPPERSTONE:US30USD",
-      "PEPPERSTONE:US2000USD",
-      "PEPPERSTONE:JP225USD",
-      "PEPPERSTONE:UK100GBP",
-      "PEPPERSTONE:DE40EUR",
-      "PEPPERSTONE:FRA40EUR",
-      "PEPPERSTONE:EU50EUR",
-      "PEPPERSTONE:ES35EUR",
-      "PEPPERSTONE:CH20CHF",
-      "PEPPERSTONE:NL25EUR",
-      "PEPPERSTONE:AU200AUD",
-      "PEPPERSTONE:HK33HKD",
-      "PEPPERSTONE:CN50USD",
-      "PEPPERSTONE:SG30SGD",
-      "PEPPERSTONE:IN50USD",
-      "PEPPERSTONE:USDX",
-      "PEPPERSTONE:VIX",
-      "PEPPERSTONE:XAUUSD",
-      "PEPPERSTONE:XAGUSD",
-      "PEPPERSTONE:XPTUSD",
-      "PEPPERSTONE:XPDUSD",
-      "PEPPERSTONE:BCOUSD",
-      "PEPPERSTONE:WTICOUSD",
-      "PEPPERSTONE:NATGASUSD",
-      "PEPPERSTONE:XCUUSD",
-      "PEPPERSTONE:CORNUSD",
-      "PEPPERSTONE:WHEATUSD",
-      "PEPPERSTONE:COFFEEUSD",
-      "PEPPERSTONE:SUGARUSD",
-      "PEPPERSTONE:COTTONUSD",
-      "PEPPERSTONE:SOYBEANUSD",
-      "PEPPERSTONE:COCOAUSD",
-      "CAPITALCOM:SPX500USD",
-      "CAPITALCOM:NAS100USD",
-      "CAPITALCOM:US30USD",
-      "CAPITALCOM:US2000USD",
-      "CAPITALCOM:JP225USD",
-      "CAPITALCOM:UK100GBP",
-      "CAPITALCOM:DE40EUR",
-      "CAPITALCOM:FRA40EUR",
-      "CAPITALCOM:EU50EUR",
-      "CAPITALCOM:ES35EUR",
-      "CAPITALCOM:CH20CHF",
-      "CAPITALCOM:NL25EUR",
-      "CAPITALCOM:AU200AUD",
-      "CAPITALCOM:HK33HKD",
-      "CAPITALCOM:CN50USD",
-      "CAPITALCOM:SG30SGD",
-      "CAPITALCOM:IN50USD",
-      "CAPITALCOM:USDX",
-      "CAPITALCOM:VIX",
-      "CAPITALCOM:XAUUSD",
-      "CAPITALCOM:XAGUSD",
-      "CAPITALCOM:XPTUSD"
-    ]
-  },
-  {
-    "groupId": 48,
-    "symbols": [
-      "CAPITALCOM:XPDUSD",
-      "CAPITALCOM:BCOUSD",
-      "CAPITALCOM:WTICOUSD",
-      "CAPITALCOM:NATGASUSD",
-      "CAPITALCOM:XCUUSD",
-      "CAPITALCOM:CORNUSD",
-      "CAPITALCOM:WHEATUSD",
-      "CAPITALCOM:COFFEEUSD",
-      "CAPITALCOM:SUGARUSD",
-      "CAPITALCOM:COTTONUSD",
-      "CAPITALCOM:SOYBEANUSD",
-      "CAPITALCOM:COCOAUSD",
-      "VANTAGE:SPX500USD",
-      "VANTAGE:NAS100USD",
-      "VANTAGE:US30USD",
-      "VANTAGE:US2000USD",
-      "VANTAGE:JP225USD",
-      "VANTAGE:UK100GBP",
-      "VANTAGE:DE40EUR",
-      "VANTAGE:FRA40EUR",
-      "VANTAGE:EU50EUR",
-      "VANTAGE:ES35EUR",
-      "VANTAGE:CH20CHF",
-      "VANTAGE:NL25EUR",
-      "VANTAGE:AU200AUD",
-      "VANTAGE:HK33HKD",
-      "VANTAGE:CN50USD",
-      "VANTAGE:SG30SGD",
-      "VANTAGE:IN50USD",
-      "VANTAGE:USDX",
-      "VANTAGE:VIX",
-      "VANTAGE:XAUUSD",
-      "VANTAGE:XAGUSD",
-      "VANTAGE:XPTUSD",
-      "VANTAGE:XPDUSD",
-      "VANTAGE:BCOUSD",
-      "VANTAGE:WTICOUSD",
-      "VANTAGE:NATGASUSD",
-      "VANTAGE:XCUUSD",
-      "VANTAGE:CORNUSD",
-      "VANTAGE:WHEATUSD",
-      "VANTAGE:COFFEEUSD",
-      "VANTAGE:SUGARUSD",
-      "VANTAGE:COTTONUSD",
-      "VANTAGE:SOYBEANUSD",
-      "VANTAGE:COCOAUSD",
       "CITYINDEX:UK100CFD",
       "CITYINDEX:GERMANY40CFD",
       "CITYINDEX:USSPX500CFD",
@@ -8060,17 +7671,17 @@
       "BINANCE:BNXUSDT",
       "BINANCE:BOMEUSDT",
       "BINANCE:BONDUSDT",
-      "BINANCE:BONKUSDT"
+      "BINANCE:BONKUSDT",
+      "BINANCE:BROCCOLI714USDT",
+      "BINANCE:BSWUSDT",
+      "BINANCE:BTCSTUSDT",
+      "BINANCE:BTCUSDT",
+      "BINANCE:BTGUSDT"
     ]
   },
   {
     "groupId": 49,
     "symbols": [
-      "BINANCE:BROCCOLI714USDT",
-      "BINANCE:BSWUSDT",
-      "BINANCE:BTCSTUSDT",
-      "BINANCE:BTCUSDT",
-      "BINANCE:BTGUSDT",
       "BINANCE:BTSUSDT",
       "BINANCE:BTTCUSDT",
       "BINANCE:BTTUSDT",
@@ -8225,15 +7836,15 @@
       "BINANCE:INITUSDT",
       "BINANCE:INJUSDT",
       "BINANCE:IOSTUSDT",
-      "BINANCE:IOTAUSDT",
-      "BINANCE:IOTXUSDT",
-      "BINANCE:IOUSDT",
-      "BINANCE:IQUSDT"
+      "BINANCE:IOTAUSDT"
     ]
   },
   {
     "groupId": 50,
     "symbols": [
+      "BINANCE:IOTXUSDT",
+      "BINANCE:IOUSDT",
+      "BINANCE:IQUSDT",
       "BINANCE:IRISUSDT",
       "BINANCE:JASMYUSDT",
       "BINANCE:JOEUSDT",

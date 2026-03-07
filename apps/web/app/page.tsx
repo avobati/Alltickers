@@ -26,7 +26,7 @@ export default async function Home() {
       <section className="hero">
         <div>
           <h1 className="title">AllTickers UT Scanner</h1>
-          <p className="sub">Weekly signals, 50 groups x 200 tickers, TradingView-linked output.</p>
+          <p className="sub">Weekly signals from the latest unique universe, TradingView-linked output.</p>
         </div>
         <div className="meta">Build {commit.slice(0, 7)}</div>
       </section>
