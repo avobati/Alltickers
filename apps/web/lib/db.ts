@@ -22,20 +22,20 @@ export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Pro
   }
 
   const sql = `
-    with latest_runs as (
-      select id
+    with latest_group_runs as (
+      select distinct on (group_id)
+        id, group_id
       from scan_runs
       where timeframe = $2
         and status = 'success'
-      order by started_at desc
-      limit 50
+      order by group_id, started_at desc
     )
     select s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
     from signals s
-    where s.run_id in (select id from latest_runs)
-      and s.symbol not like '%SPARE%'
+    join latest_group_runs lgr on lgr.id = s.run_id
+    where s.symbol not like '%SPARE%'
       and s.timeframe = $2
-    order by s.ts desc
+    order by s.symbol asc, s.ts desc
     limit $1
   `;
 
