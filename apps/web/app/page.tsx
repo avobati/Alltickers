@@ -4,11 +4,13 @@ export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const signals = await getLatestSignals(100);
+  const commit = process.env.VERCEL_GIT_COMMIT_SHA || "local";
 
   return (
     <main style={{ fontFamily: "ui-sans-serif, system-ui", padding: 24 }}>
       <h1>UT Scanner V2</h1>
       <p>50 groups, daily scan, TradingView-formatted symbols.</p>
+      <p style={{ color: "#666", fontSize: 12 }}>Build commit: {commit}</p>
       <table cellPadding={8} style={{ borderCollapse: "collapse", width: "100%" }}>
         <thead>
           <tr>
