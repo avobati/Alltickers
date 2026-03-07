@@ -1,4 +1,4 @@
-import { getLatestSignals } from "db";
+import { getLatestSignals } from "../../../lib/db";
 
 export const dynamic = "force-dynamic";
 
