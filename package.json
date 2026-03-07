@@ -1,0 +1,14 @@
+{
+  "name": "ut-vercel-scanner-blueprint",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "web": "pnpm --filter web dev",
+    "worker": "pnpm --filter worker start",
+    "gen:groups": "node scripts/generate-groups.mjs",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

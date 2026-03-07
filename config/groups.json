@@ -1,0 +1,452 @@
+[
+  {
+    "groupId": 1,
+    "symbols": [
+      "AAPL",
+      "MSFT",
+      "NVDA",
+      "AMZN"
+    ]
+  },
+  {
+    "groupId": 2,
+    "symbols": [
+      "GOOGL",
+      "META",
+      "TSLA",
+      "AMD"
+    ]
+  },
+  {
+    "groupId": 3,
+    "symbols": [
+      "NFLX",
+      "PLTR",
+      "COIN",
+      "UBER"
+    ]
+  },
+  {
+    "groupId": 4,
+    "symbols": [
+      "ORCL",
+      "ADBE",
+      "CRM",
+      "INTC"
+    ]
+  },
+  {
+    "groupId": 5,
+    "symbols": [
+      "CSCO",
+      "QCOM",
+      "IBM",
+      "TXN"
+    ]
+  },
+  {
+    "groupId": 6,
+    "symbols": [
+      "AVGO",
+      "MU",
+      "SHOP",
+      "SNOW"
+    ]
+  },
+  {
+    "groupId": 7,
+    "symbols": [
+      "PANW",
+      "CRWD",
+      "ZS",
+      "DDOG"
+    ]
+  },
+  {
+    "groupId": 8,
+    "symbols": [
+      "NET",
+      "MDB",
+      "NOW",
+      "TEAM"
+    ]
+  },
+  {
+    "groupId": 9,
+    "symbols": [
+      "PYPL",
+      "DOCU",
+      "ROKU",
+      "ABNB"
+    ]
+  },
+  {
+    "groupId": 10,
+    "symbols": [
+      "BKNG",
+      "MELI",
+      "PINS",
+      "SNAP"
+    ]
+  },
+  {
+    "groupId": 11,
+    "symbols": [
+      "TWLO",
+      "OKTA",
+      "ESTC",
+      "FSLY"
+    ]
+  },
+  {
+    "groupId": 12,
+    "symbols": [
+      "AKAM",
+      "WDAY",
+      "INTU",
+      "SAP"
+    ]
+  },
+  {
+    "groupId": 13,
+    "symbols": [
+      "SONY",
+      "BABA",
+      "JD",
+      "PDD"
+    ]
+  },
+  {
+    "groupId": 14,
+    "symbols": [
+      "SE",
+      "NTES",
+      "BIDU",
+      "TME"
+    ]
+  },
+  {
+    "groupId": 15,
+    "symbols": [
+      "BILI",
+      "LI",
+      "NIO",
+      "XPEV"
+    ]
+  },
+  {
+    "groupId": 16,
+    "symbols": [
+      "RIVN",
+      "LCID",
+      "F",
+      "GM"
+    ]
+  },
+  {
+    "groupId": 17,
+    "symbols": [
+      "HMC",
+      "TM",
+      "STLA",
+      "DE"
+    ]
+  },
+  {
+    "groupId": 18,
+    "symbols": [
+      "CAT",
+      "BA",
+      "LMT",
+      "NOC"
+    ]
+  },
+  {
+    "groupId": 19,
+    "symbols": [
+      "RTX",
+      "GE",
+      "HON",
+      "MMM"
+    ]
+  },
+  {
+    "groupId": 20,
+    "symbols": [
+      "UPS",
+      "FDX",
+      "UNP",
+      "CSX"
+    ]
+  },
+  {
+    "groupId": 21,
+    "symbols": [
+      "NSC",
+      "DAL",
+      "UAL",
+      "AAL"
+    ]
+  },
+  {
+    "groupId": 22,
+    "symbols": [
+      "LUV",
+      "JBLU",
+      "MAR",
+      "HLT"
+    ]
+  },
+  {
+    "groupId": 23,
+    "symbols": [
+      "MCD",
+      "SBUX",
+      "YUM",
+      "CMG"
+    ]
+  },
+  {
+    "groupId": 24,
+    "symbols": [
+      "DPZ",
+      "KO",
+      "PEP",
+      "MNST"
+    ]
+  },
+  {
+    "groupId": 25,
+    "symbols": [
+      "KDP",
+      "PM",
+      "MO",
+      "PG"
+    ]
+  },
+  {
+    "groupId": 26,
+    "symbols": [
+      "CL",
+      "KMB",
+      "EL",
+      "UL"
+    ]
+  },
+  {
+    "groupId": 27,
+    "symbols": [
+      "JNJ",
+      "PFE",
+      "MRK",
+      "LLY"
+    ]
+  },
+  {
+    "groupId": 28,
+    "symbols": [
+      "ABBV",
+      "BMY",
+      "AMGN",
+      "GILD"
+    ]
+  },
+  {
+    "groupId": 29,
+    "symbols": [
+      "BIIB",
+      "REGN",
+      "VRTX",
+      "ISRG"
+    ]
+  },
+  {
+    "groupId": 30,
+    "symbols": [
+      "MDT",
+      "TMO",
+      "DHR",
+      "CVS"
+    ]
+  },
+  {
+    "groupId": 31,
+    "symbols": [
+      "UNH",
+      "CI",
+      "HUM",
+      "CNC"
+    ]
+  },
+  {
+    "groupId": 32,
+    "symbols": [
+      "XOM",
+      "CVX",
+      "COP",
+      "EOG"
+    ]
+  },
+  {
+    "groupId": 33,
+    "symbols": [
+      "SLB",
+      "MPC",
+      "VLO",
+      "PSX"
+    ]
+  },
+  {
+    "groupId": 34,
+    "symbols": [
+      "OXY",
+      "BP",
+      "SHEL",
+      "TOT"
+    ]
+  },
+  {
+    "groupId": 35,
+    "symbols": [
+      "ENB",
+      "SPY",
+      "QQQ",
+      "IWM"
+    ]
+  },
+  {
+    "groupId": 36,
+    "symbols": [
+      "VTI",
+      "DIA",
+      "GLD",
+      "SLV"
+    ]
+  },
+  {
+    "groupId": 37,
+    "symbols": [
+      "XLE",
+      "XLF",
+      "XLK",
+      "XLV"
+    ]
+  },
+  {
+    "groupId": 38,
+    "symbols": [
+      "XLY",
+      "XLP",
+      "XLI",
+      "XLU"
+    ]
+  },
+  {
+    "groupId": 39,
+    "symbols": [
+      "XLB",
+      "VNQ",
+      "ARKK",
+      "SMH"
+    ]
+  },
+  {
+    "groupId": 40,
+    "symbols": [
+      "GDX",
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT"
+    ]
+  },
+  {
+    "groupId": 41,
+    "symbols": [
+      "BNBUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "DOGEUSDT"
+    ]
+  },
+  {
+    "groupId": 42,
+    "symbols": [
+      "AVAXUSDT",
+      "LINKUSDT",
+      "DOTUSDT",
+      "LTCUSDT"
+    ]
+  },
+  {
+    "groupId": 43,
+    "symbols": [
+      "TRXUSDT",
+      "MATICUSDT",
+      "ATOMUSDT",
+      "UNIUSDT"
+    ]
+  },
+  {
+    "groupId": 44,
+    "symbols": [
+      "XLMUSDT",
+      "ETCUSDT",
+      "BCHUSDT",
+      "FILUSDT"
+    ]
+  },
+  {
+    "groupId": 45,
+    "symbols": [
+      "AAVEUSDT",
+      "NEARUSDT",
+      "ALGOUSDT",
+      "ICPUSDT"
+    ]
+  },
+  {
+    "groupId": 46,
+    "symbols": [
+      "APTUSDT",
+      "ARBUSDT",
+      "XAUUSD",
+      "XAGUSD"
+    ]
+  },
+  {
+    "groupId": 47,
+    "symbols": [
+      "XPTUSD",
+      "XPDUSD",
+      "COPPERUSD",
+      "WMT"
+    ]
+  },
+  {
+    "groupId": 48,
+    "symbols": [
+      "COST",
+      "TGT",
+      "LOW",
+      "HD"
+    ]
+  },
+  {
+    "groupId": 49,
+    "symbols": [
+      "NKE",
+      "DIS",
+      "V",
+      "MA"
+    ]
+  },
+  {
+    "groupId": 50,
+    "symbols": [
+      "AXP",
+      "SPARE198",
+      "SPARE199",
+      "SPARE200"
+    ]
+  }
+]
