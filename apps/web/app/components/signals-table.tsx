@@ -33,6 +33,10 @@ function badgeClass(signal: string): string {
   return "badge neutral";
 }
 
+function sortAsc(values: string[]): string[] {
+  return [...values].sort((a, b) => a.localeCompare(b));
+}
+
 export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const [symbolFilter, setSymbolFilter] = useState("ALL");
   const [marketFilter, setMarketFilter] = useState("ALL");
@@ -42,16 +46,30 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
   const [signalPriceOrder, setSignalPriceOrder] = useState("none");
   const [priceOrder, setPriceOrder] = useState("none");
 
-  const symbolOptions = useMemo(() => Array.from(new Set(rows.map((r) => shortSymbol(r.symbol)))).slice(0, 300), [rows]);
-  const marketOptions = useMemo(() => Array.from(new Set(rows.map((r) => marketFromTvSymbol(r.symbol)))).slice(0, 40), [rows]);
-  const timeframeOptions = useMemo(() => Array.from(new Set(rows.map((r) => r.timeframe))), [rows]);
+  const symbolOptions = useMemo(
+    () => sortAsc(Array.from(new Set(rows.map((r) => shortSymbol(r.symbol).trim().toUpperCase())))),
+    [rows]
+  );
+  const marketOptions = useMemo(
+    () => sortAsc(Array.from(new Set(rows.map((r) => marketFromTvSymbol(r.symbol).trim().toUpperCase())))),
+    [rows]
+  );
+  const timeframeOptions = useMemo(
+    () => sortAsc(Array.from(new Set(rows.map((r) => r.timeframe.trim().toLowerCase())))),
+    [rows]
+  );
 
   const filtered = useMemo(() => {
     let data = rows.filter((r) => {
-      if (symbolFilter !== "ALL" && shortSymbol(r.symbol) !== symbolFilter) return false;
-      if (marketFilter !== "ALL" && marketFromTvSymbol(r.symbol) !== marketFilter) return false;
-      if (timeframeFilter !== "ALL" && r.timeframe !== timeframeFilter) return false;
-      if (signalFilter !== "ALL" && r.signal !== signalFilter) return false;
+      const symbol = shortSymbol(r.symbol).trim().toUpperCase();
+      const market = marketFromTvSymbol(r.symbol).trim().toUpperCase();
+      const timeframe = r.timeframe.trim().toLowerCase();
+      const signal = r.signal.trim().toUpperCase();
+
+      if (symbolFilter !== "ALL" && symbol !== symbolFilter) return false;
+      if (marketFilter !== "ALL" && market !== marketFilter) return false;
+      if (timeframeFilter !== "ALL" && timeframe !== timeframeFilter) return false;
+      if (signalFilter !== "ALL" && signal !== signalFilter) return false;
       if (barsFilter === "0" && r.bars_ago !== 0) return false;
       if (barsFilter === "1-3" && (r.bars_ago == null || r.bars_ago < 1 || r.bars_ago > 3)) return false;
       if (barsFilter === "4+" && (r.bars_ago == null || r.bars_ago < 4)) return false;
@@ -160,8 +178,8 @@ export default function SignalsTable({ rows }: { rows: SignalRow[] }) {
           </tr>
         </thead>
         <tbody>
-          {filtered.map((s) => (
-            <tr key={`${s.symbol}-${s.timeframe}-${s.ts}`}>
+          {filtered.map((s, idx) => (
+            <tr key={`${s.symbol}-${s.timeframe}-${s.ts}-${idx}`}>
               <td>{shortSymbol(s.symbol)}</td>
               <td>{marketFromTvSymbol(s.symbol)}</td>
               <td>{s.timeframe}</td>
