@@ -14,7 +14,7 @@ type Signal = {
 };
 
 export default async function Home() {
-  const signals = (await getLatestSignals(400, "weekly")) as Signal[];
+  const signals = (await getLatestSignals(10000, "weekly")) as Signal[];
   const commit = process.env.VERCEL_GIT_COMMIT_SHA || "local";
 
   const buyCount = signals.filter((s) => s.signal === "BUY").length;

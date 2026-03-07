@@ -16,24 +16,24 @@ const useNoDbMode = !rawDatabaseUrl || hasPlaceholderDbUrl;
 
 const pool = useNoDbMode ? null : new Pool({ connectionString: rawDatabaseUrl });
 
-export async function getLatestSignals(limit = 100, timeframe = "weekly"): Promise<SignalRow[]> {
+export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Promise<SignalRow[]> {
   if (!pool) {
     return [];
   }
 
   const sql = `
+    with latest_runs as (
+      select id
+      from scan_runs
+      where timeframe = $2
+        and status = 'success'
+      order by started_at desc
+      limit 50
+    )
     select s.symbol, s.timeframe, s.signal, s.price, s.signal_price, s.bars_ago, s.ts
     from signals s
-    join (
-      select symbol, timeframe, max(ts) as max_ts
-      from signals
-      where symbol not like '%SPARE%'
-      group by symbol, timeframe
-    ) latest
-      on s.symbol = latest.symbol
-     and s.timeframe = latest.timeframe
-     and s.ts = latest.max_ts
-    where s.symbol not like '%SPARE%'
+    where s.run_id in (select id from latest_runs)
+      and s.symbol not like '%SPARE%'
       and s.timeframe = $2
     order by s.ts desc
     limit $1
