@@ -9,10 +9,18 @@ const GROUP_COUNT = 50;
 const TICKERS_PER_GROUP = 200;
 const REQUIRED_TOTAL = GROUP_COUNT * TICKERS_PER_GROUP;
 
+function toTvSymbol(input) {
+  const s = input.trim().toUpperCase();
+  if (!s) return "";
+  if (s.includes(":")) return s;
+  if (s.endsWith("USDT")) return `BINANCE:${s}`;
+  return `NASDAQ:${s}`;
+}
+
 const raw = fs.readFileSync(tickersPath, "utf8");
 let symbols = raw
   .split(/\r?\n/)
-  .map((x) => x.trim().toUpperCase())
+  .map((x) => toTvSymbol(x))
   .filter(Boolean)
   .filter((x) => !x.startsWith("#"));
 
@@ -21,7 +29,7 @@ symbols = Array.from(new Set(symbols));
 if (symbols.length < REQUIRED_TOTAL) {
   const missing = REQUIRED_TOTAL - symbols.length;
   for (let i = 1; i <= missing; i += 1) {
-    symbols.push(`SPARE${String(i).padStart(5, "0")}`);
+    symbols.push(`NASDAQ:SPARE${String(i).padStart(5, "0")}`);
   }
 }
 
@@ -39,4 +47,4 @@ for (let i = 0; i < GROUP_COUNT; i += 1) {
 fs.writeFileSync(tickersPath, `${symbols.join("\n")}\n`);
 fs.writeFileSync(groupsPath, JSON.stringify(groups, null, 2));
 
-console.log(`Generated ${GROUP_COUNT} groups x ${TICKERS_PER_GROUP} = ${REQUIRED_TOTAL} tickers`);
+console.log(`Generated ${GROUP_COUNT} groups x ${TICKERS_PER_GROUP} = ${REQUIRED_TOTAL} tickers (TradingView format)`);
