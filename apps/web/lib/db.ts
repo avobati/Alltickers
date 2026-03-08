@@ -1,6 +1,7 @@
 import { Pool } from "pg";
 import universe from "../data/universe.json";
 import symbolMeta from "../data/symbol_meta.json";
+import manualBackfill from "../data/manual_backfill.json";
 
 type SignalRow = {
   symbol: string;
@@ -16,6 +17,13 @@ type SignalRow = {
 
 type UniverseFile = { symbols?: string[] };
 type MetaEntry = { name?: string; market?: string };
+type BackfillEntry = {
+  timeframe?: string;
+  signal?: string;
+  price?: string | number | null;
+  signal_price?: string | number | null;
+  bars_ago?: number | null;
+};
 
 const rawDatabaseUrl = (process.env.DATABASE_URL || "").trim();
 const hasPlaceholderDbUrl = /user:pass@host/.test(rawDatabaseUrl);
@@ -23,6 +31,7 @@ const useNoDbMode = !rawDatabaseUrl || hasPlaceholderDbUrl;
 const pool = useNoDbMode ? null : new Pool({ connectionString: rawDatabaseUrl });
 
 const meta = symbolMeta as Record<string, MetaEntry>;
+const backfill = manualBackfill as Record<string, BackfillEntry>;
 
 function metaFor(symbol: string): { symbol_name: string; market: string } {
   const entry = meta[symbol] || {};
@@ -51,20 +60,56 @@ function loadUniverse(): string[] {
   return out;
 }
 
-export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Promise<SignalRow[]> {
-  const universeSymbols = loadUniverse();
-  const cap = Math.max(1, limit);
+function applyBackfill(symbol: string, timeframe: string, row: Omit<SignalRow, "symbol_name" | "market">): Omit<SignalRow, "symbol_name" | "market"> {
+  const b = backfill[symbol];
+  if (!b) return row;
+  if ((b.timeframe || timeframe).toLowerCase() !== row.timeframe.toLowerCase()) return row;
 
-  if (!pool) {
-    return universeSymbols.slice(0, cap).map((symbol) => ({
+  const needsBackfill = row.price == null || row.signal_price == null || row.bars_ago == null;
+  if (!needsBackfill) return row;
+
+  return {
+    ...row,
+    signal: row.signal || b.signal || "NEUTRAL",
+    price: row.price ?? b.price ?? null,
+    signal_price: row.signal_price ?? b.signal_price ?? null,
+    bars_ago: row.bars_ago ?? b.bars_ago ?? null,
+  };
+}
+
+function backfillOnly(symbol: string, timeframe: string): Omit<SignalRow, "symbol_name" | "market"> {
+  const b = backfill[symbol];
+  if (!b || (b.timeframe || timeframe).toLowerCase() !== timeframe.toLowerCase()) {
+    return {
       symbol,
-      ...metaFor(symbol),
       timeframe,
       signal: "NEUTRAL",
       price: null,
       signal_price: null,
       bars_ago: null,
       ts: new Date(0).toISOString(),
+    };
+  }
+
+  return {
+    symbol,
+    timeframe,
+    signal: b.signal || "NEUTRAL",
+    price: b.price ?? null,
+    signal_price: b.signal_price ?? null,
+    bars_ago: b.bars_ago ?? null,
+    ts: new Date(0).toISOString(),
+  };
+}
+
+export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Promise<SignalRow[]> {
+  const universeSymbols = loadUniverse();
+  const cap = Math.max(1, limit);
+
+  if (!pool) {
+    return universeSymbols.slice(0, cap).map((symbol) => ({
+      ...backfillOnly(symbol, timeframe),
+      ...metaFor(symbol),
     }));
   }
 
@@ -85,16 +130,7 @@ export async function getLatestSignals(limit = 10000, timeframe = "weekly"): Pro
   return universeSymbols.slice(0, cap).map((symbol) => {
     const m = metaFor(symbol);
     const row = latest.get(symbol);
-    if (row) return { ...row, ...m };
-    return {
-      symbol,
-      ...m,
-      timeframe,
-      signal: "NEUTRAL",
-      price: null,
-      signal_price: null,
-      bars_ago: null,
-      ts: new Date(0).toISOString(),
-    };
+    if (row) return { ...applyBackfill(symbol, timeframe, row), ...m };
+    return { ...backfillOnly(symbol, timeframe), ...m };
   });
 }
